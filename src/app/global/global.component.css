@@ -17,12 +17,13 @@
 }
 
 .divider{
-    width:5px;
-    height:auto;
-    display:inline-block;
+    width: 5px;
+    height: auto;
+    display: inline-block;
 }
 
 .mpara{
+    display: flex;
     position: relative;
     left: 25%;
     top: 75px;
