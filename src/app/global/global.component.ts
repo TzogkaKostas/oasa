@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './global.component.html',
   styleUrls: ['./global.component.css']
 })
+
 export class GlobalComponent implements OnInit {
 
   constructor(

@@ -32,15 +32,26 @@
         <div class="divider"></div>
 
         
-        <div class="btn-group">
-            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <div *ngIf = 'greek' ngbDropdown class="btn-group">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Για τον επιβάτη
             </button>
-            <div class="dropdown-menu">
+            <div ngbDropdownMenu class="dropdown-menu">
               <a class="dropdown-item" href="#">Ερωτηματολόγιο</a>
               <a class="dropdown-item" href="#">Απολεσθέντα</a>
             </div>
           </div>
+
+          <div *ngIf = '!greek' ngbDropdown class="btn-group">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              For the passenger
+            </button>
+            <div ngbDropdownMenu class="dropdown-menu">
+              <a class="dropdown-item" href="#">Questionnaire</a>
+              <a class="dropdown-item" href="#">Lost</a>
+            </div>
+          </div>
+      
     </nav>
 </div>
 

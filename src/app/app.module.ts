@@ -13,6 +13,8 @@ import { ErotimatologioComponent } from './erotimatologio/erotimatologio.compone
 import { OrarioLeitourgiasComponent } from './orario-leitourgias/orario-leitourgias.component';
 import { FormaParapononComponent } from './forma-paraponon/forma-paraponon.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ import { FormaParapononComponent } from './forma-paraponon/forma-paraponon.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [
     HttpService
