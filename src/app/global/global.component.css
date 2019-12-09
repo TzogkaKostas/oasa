@@ -1,0 +1,30 @@
+.center {
+    display: flex;
+    justify-content: center;
+  }
+
+.oasapic{
+    position: relative;
+    right: 12%;
+    top: 55px;
+    cursor: pointer;
+}
+
+.oasabar{
+    position: relative;
+    left: 12%;
+    top: 70px;
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+.mpara{
+    position: relative;
+    left: 25%;
+    top: 75px;
+    width: 50%;
+}
