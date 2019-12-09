@@ -1,6 +1,10 @@
 .center {
     display: flex;
     justify-content: center;
+
+    border-color: rgb(248, 0, 248);
+    border-width: 2px; /* this allows you to adjust the thickness */
+    border-style: solid;
   }
 
 .oasapic{
@@ -11,6 +15,10 @@
 }
 
 .oasabar{
+    /* border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-style: solid; */
+
     position: relative;
     left: 12%;
     top: 70px;
@@ -23,9 +31,13 @@
 }
 
 .mpara{
+    border-color: rgb(15, 77, 4);
+    border-width: 2px; /* this allows you to adjust the thickness */
+    border-style: solid;
+
     display: flex;
     position: relative;
-    left: 25%;
+    /* left: 25%; */
     top: 75px;
-    width: 51%;
+    /* width: 50%; */
 }

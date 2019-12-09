@@ -1,0 +1,23 @@
+.center {
+    border-color: rgb(201, 76, 76);
+    border-width: 2px; /* this allows you to adjust the thickness */
+    border-style: solid;
+    
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 75px;
+  }
+
+.divider{
+    width: 5px;
+    height: auto;
+    display: inline-block;
+}
+
+.mainpagePic{
+    position: relative;
+    height: 170px;
+    width: 51%;
+    right: 0%;
+}

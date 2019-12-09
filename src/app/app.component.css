@@ -1,7 +1,8 @@
 .bg {
     height:auto;
-	min-height:100vh;
+	min-height: 100vh;
+	width: auto;
 	background-image: url("/assets/blue_bg.jpg");
-	background-size:cover;
-	background-position:center;
+	background-size: cover;
+	background-position: center;
   }
