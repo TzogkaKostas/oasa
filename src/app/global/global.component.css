@@ -2,9 +2,9 @@
     display: flex;
     justify-content: center;
 
-    border-color: rgb(248, 0, 248);
-    border-width: 2px; /* this allows you to adjust the thickness */
-    border-style: solid;
+    /* border-color: rgb(248, 0, 248);
+    border-width: 2px;
+    border-style: solid; */
   }
 
 .oasapic{
@@ -31,9 +31,9 @@
 }
 
 .mpara{
-    border-color: rgb(15, 77, 4);
-    border-width: 2px; /* this allows you to adjust the thickness */
-    border-style: solid;
+    /* border-color: rgb(15, 77, 4);
+    border-width: 2px;
+    border-style: solid; */
 
     display: flex;
     position: relative;
