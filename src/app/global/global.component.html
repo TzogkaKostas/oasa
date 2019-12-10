@@ -26,14 +26,15 @@
 </div>
 
 <div class="mpara center">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"><!--  navbar-dark bg-primary -->
+    <div class="fixmpara">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light"><!--  navbar-dark bg-primary -->
         <button *ngIf='greek' type="button" class="btn btn-primary" routerLink=''>Κεντρική Σελίδα</button>
         <button *ngIf='!greek' type="button" class="btn btn-primary" routerLink=''>Main Page</button>
         <div class="divider"></div>
 
         
         <div *ngIf = 'greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Για τον επιβάτη
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -43,7 +44,7 @@
           </div>
 
           <div *ngIf = '!greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               For the passenger
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -55,7 +56,7 @@
           <div class="divider"></div>
 
           <div *ngIf = 'greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Μετακίνηση
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -68,7 +69,7 @@
           </div>
 
           <div *ngIf = '!greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Movement
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -80,7 +81,7 @@
           <div class="divider"></div>
 
           <div *ngIf = 'greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Εισητήρια - Κάρτες
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -92,7 +93,7 @@
           </div>
 
           <div *ngIf = '!greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Tickets - Cards
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -107,7 +108,7 @@
           <div class="divider"></div>
 
           <div *ngIf = 'greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               ΑμεΑ
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -117,7 +118,7 @@
           </div>
 
           <div *ngIf = '!greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               For the Disabled
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -129,7 +130,7 @@
           <div class="divider"></div>
 
           <div *ngIf = 'greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Επικοινωνία
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -139,7 +140,7 @@
           </div>
 
           <div *ngIf = '!greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Communication
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -154,7 +155,7 @@
           <div class="divider"></div>
 
           <div *ngIf = 'greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Σχετικά με Εμάς
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -165,7 +166,7 @@
           </div>
 
           <div *ngIf = '!greek' ngbDropdown class="btn-group">
-            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button ngbDropdownToggle type="button" class="btn btn-info dropdown-toggle btncustom" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               About us
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
@@ -178,6 +179,7 @@
           </div>
       
     </nav>
+    </div>
 </div>
 
 <!-- <div class="dropdown">

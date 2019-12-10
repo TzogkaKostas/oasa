@@ -1,13 +1,64 @@
 .center {
-    /* border-color: rgb(201, 76, 76);
+    border-color: rgb(201, 76, 76);
     border-width: 2px;
-    border-style: solid; */
+    border-style: solid;
     
     display: flex;
     justify-content: center;
     position: relative;
+    margin: auto;
+    width: 65%;
     top: 75px;
+    /* width: 65%; */
+    /* left: 12%; */
   }
+
+.center2 {
+  border-color: rgb(201, 76, 76);
+  border-width: 2px;
+  border-style: solid;
+  
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  width: 65%;
+  top: 75px;
+  /* width: 65%; */
+  /* left: 12%; */
+}
+
+.center3 {
+  border-color: rgb(201, 76, 76);
+  border-width: 2px;
+  border-style: solid;
+  
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  width: 20%;
+  height: 300px;
+  top: 75px;
+  /* width: 65%; */
+  right: 22.5%;
+}
+
+.center4 {
+  border-color: rgb(201, 76, 76);
+  border-width: 2px;
+  border-style: solid;
+  
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: auto;
+  width: 40%;
+  height: 300px;
+  top: 75px;
+  /* width: 65%; */
+  right: 12.5%;
+}
 
 .divider{
     width: 5px;
@@ -16,9 +67,13 @@
 }
 
 .mainpagePic{
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-style: solid;
+
     position: relative;
     height: 170px;
-    width: 76%;
+    width: 100%;
     right: 0%;
     border-radius: 25px;
 }
@@ -35,9 +90,9 @@
     background-repeat: repeat;
     background-size: 150%;
     padding: 20px;
-    width: 300px;
-    height: 300px;
-    right: 27%;
+    width: 100%;
+    height: 100%;
+    /* right: 27%; */
 }
 
 .wtClass{
@@ -47,6 +102,54 @@
 
 .submitrout{
     position: relative;
-    bottom: 0px;
-    right: 0px;
+    top: 20px;
+    left: 25%;
+}
+
+.anakoinoseis{
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-style: solid;
+
+    position: relative;
+    border-radius: 25px;
+    background: url('/assets/whitebg.jpg');
+    background-position: left top;
+    background-repeat: repeat;
+    background-size: 150%;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    /* right: 14%; */
+}
+
+.anakoinoseisPaging{
+    border-color: rgb(0, 99, 192);
+    border-width: 1px;
+    border-style: solid;
+    
+    cursor: pointer;
+    position: relative;
+    top: 10%;
+    width: 247px;
+    /* left: 175px; */
+    
+}
+
+.roianakoinoseon{
+    border-color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-style: solid;
+
+    position: relative;
+    border-radius: 25px;
+    background: url('/assets/whitebg.jpg');
+    background-position: left top;
+    background-repeat: repeat;
+    background-size: 150%;
+    padding: 20px;
+    width: 300px;
+    height: 650px;
+    left: 0%;
+    top: 170px;
 }

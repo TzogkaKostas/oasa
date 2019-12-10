@@ -31,13 +31,29 @@
 }
 
 .mpara{
-    /* border-color: rgb(15, 77, 4);
+    border-color: rgb(15, 77, 4);
     border-width: 2px;
-    border-style: solid; */
+    border-style: solid;
 
     display: flex;
     position: relative;
+    margin: auto;
+    width: 65%;
     /* left: 25%; */
     top: 75px;
-    /* width: 50%; */
+    /* width: 65%; */
+    /* left: 20%; */
+    
+}
+
+.fixmpara{
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+
+.btncustom{
+    font-size : 12px;
+    width: 50%;
+    height: 30%;
 }
