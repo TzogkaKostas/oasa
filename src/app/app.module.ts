@@ -14,6 +14,8 @@ import { OrarioLeitourgiasComponent } from './orario-leitourgias/orario-leitourg
 import { FormaParapononComponent } from './forma-paraponon/forma-paraponon.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { EvresiDiadromisComponent } from './evresi-diadromis/evresi-diadromis.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,15 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     TimesEisitirionComponent,
     ErotimatologioComponent,
     OrarioLeitourgiasComponent,
-    FormaParapononComponent
+    FormaParapononComponent,
+    EvresiDiadromisComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     HttpService

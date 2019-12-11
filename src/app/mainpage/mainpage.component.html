@@ -1,34 +1,40 @@
 <div class="center2">
-    <img src="/assets/bus.jpg" class="mainpagePic">
+    <img src="/assets/bus2.jpg" class="mainpagePic">
 </div>
 <div class="center3">
     <div class="whereTo">
-        <form class="form-inline">
-            <div class="wtClass">
-                Προς τα Που?
-            </div>
-            <br><br><br>
+        <div class="wtClass">
+            Προς τα Που?
+        </div>
+        <form class="form-inline" style="position: relative; top: 10%; right: 5%;" #form="ngForm">
+            <br>
             <div class="form-group mx-sm-3 mb-2">
               <label for="inputPassword2" class="sr-only">From</label>
-              <input type="name" class="form-control" id="inputPassword2" placeholder="Αφετηρία">
+              <input ngModel name="afetiria" #afetiria="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Αφετηρία" required>
             </div>
             <br>
             <div class="form-group mx-sm-3 mb-2">
               <label for="inputPassword2" class="sr-only">To</label>
-              <input type="name" class="form-control" id="inputPassword2" placeholder="Προορισμός">
+              <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Προορισμός" required>
             </div>
             <!-- <input type="radio" value="AMEA" formControlName="SPECIAL NEED"><span>ΑμεΑ</span> -->
             <br><br>
-            <button type="submit" class="btn btn-primary mb-2 submitrout">Εύρεση Διαδρομής</button>
+            <button type="submit" class="btn btn-primary mb-2 submitrout" (click)="findRout(afetiria, proorismos)">Εύρεση Διαδρομής</button>
           </form>
     </div>
 </div>
 
 <div class="center4">
   <div class="anakoinoseis">
+    <h2>Ανακοινώσεις</h2>
+    <p style="cursor: pointer;" title="Πατήστε για άνοιγμα ανακοίνωσης">Random Announcement That i have to put for no reason</p>
+    <p style="cursor: pointer;" title="Πατήστε για άνοιγμα ανακοίνωσης">Random Announcement That i have to put for no reason</p>
+    <p style="cursor: pointer;" title="Πατήστε για άνοιγμα ανακοίνωσης">Random Announcement That i have to put for no reason</p>
+    <p style="cursor: pointer;" title="Πατήστε για άνοιγμα ανακοίνωσης">Random Announcement That i have to put for no reason</p>
 
-    <nav aria-label="Page navigation example">
-      <ul class="pagination anakoinoseisPaging">
+
+    <nav aria-label="Page navigation example" class="anakoinoseisPaging">
+      <ul class="pagination">
         <li class="page-item"><a class="page-link">Previous</a></li>
         <li class="page-item"><a class="page-link">1</a></li>
         <li class="page-item"><a class="page-link">2</a></li>
@@ -40,9 +46,9 @@
 </div>
 
 
-<!-- <div class="center">
+<div class="center5">
   <div class="roianakoinoseon">
 
     
   </div>
-</div> -->
+</div>

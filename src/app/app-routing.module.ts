@@ -7,6 +7,7 @@ import { TimesEisitirionComponent } from './times-eisitirion/times-eisitirion.co
 import { ErotimatologioComponent } from './erotimatologio/erotimatologio.component';
 import { OrarioLeitourgiasComponent } from './orario-leitourgias/orario-leitourgias.component';
 import { FormaParapononComponent } from './forma-paraponon/forma-paraponon.component';
+import { EvresiDiadromisComponent } from './evresi-diadromis/evresi-diadromis.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'times', component: TimesEisitirionComponent },
   { path: 'erotimatologio', component: ErotimatologioComponent },
   { path: 'orario', component: OrarioLeitourgiasComponent },
-  { path: 'parapona', component: FormaParapononComponent }
+  { path: 'parapona', component: FormaParapononComponent },
+  { path: 'diadromi/:from/:to', component: EvresiDiadromisComponent}
 ];
 
 @NgModule({
