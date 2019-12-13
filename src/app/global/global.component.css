@@ -31,9 +31,9 @@
 }
 
 .mpara{
-    border-color: rgb(15, 77, 4);
+    /* border-color: rgb(15, 77, 4);
     border-width: 2px;
-    border-style: solid;
+    border-style: solid; */
 
     display: flex;
     position: relative;
