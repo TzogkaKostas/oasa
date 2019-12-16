@@ -58,12 +58,10 @@ body, html{
 }
 
 .form-label.form-label-auto {
-    
 display: block;
 float: none;
 text-align: left;
 width: 100%;
-
 }
 
 .form-line {
@@ -101,6 +99,19 @@ width: 100%;
     background-color: ;
     border: 1px solid transparent;
 }
+.supernova {
+    background-color: undefined;
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 65%;
+    top: 75px;   
+}
+.supernova body {
+    background: transparent;
+}
 
 .form-all {
     color: Black;
@@ -123,13 +134,6 @@ width: 100%;
     color: 1a1a25;
 }
 
-.supernova {
-    background-color: undefined;
-}
-.supernova body {
-    background: transparent;
-}
-
 .form-textbox,
 .form-textarea,
 .form-radio-other-input,
@@ -139,9 +143,7 @@ width: 100%;
     background-color: undefined;
 }
 
-.supernova {
-    background-image: none;
-}
+
 #stage {
     background-image: none;
 }
