@@ -16,6 +16,7 @@ import { FormaParapononComponent } from './forma-paraponon/forma-paraponon.compo
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { EvresiDiadromisComponent } from './evresi-diadromis/evresi-diadromis.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NuxterinaComponent } from './nuxterina/nuxterina.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ErotimatologioComponent,
     OrarioLeitourgiasComponent,
     FormaParapononComponent,
-    EvresiDiadromisComponent
+    EvresiDiadromisComponent,
+    NuxterinaComponent
   ],
   imports: [
     BrowserModule,

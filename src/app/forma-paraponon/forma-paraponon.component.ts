@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'forma-paraponon',

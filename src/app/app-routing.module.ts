@@ -8,7 +8,7 @@ import { ErotimatologioComponent } from './erotimatologio/erotimatologio.compone
 import { OrarioLeitourgiasComponent } from './orario-leitourgias/orario-leitourgias.component';
 import { FormaParapononComponent } from './forma-paraponon/forma-paraponon.component';
 import { EvresiDiadromisComponent } from './evresi-diadromis/evresi-diadromis.component';
-
+import { NuxterinaComponent } from './nuxterina/nuxterina.component';
 
 const routes: Routes = [
   { path: '', component: MainpageComponent },
@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'erotimatologio', component: ErotimatologioComponent },
   { path: 'orario', component: OrarioLeitourgiasComponent },
   { path: 'parapona', component: FormaParapononComponent },
+  { path: 'nuxterina', component: NuxterinaComponent },
   { path: 'diadromi/:from/:to', component: EvresiDiadromisComponent}
 ];
 
