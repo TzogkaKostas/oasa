@@ -10,7 +10,7 @@
 
 
 <body>
-<form class="ng-form" action="https://submit.jotform.com/submit/193466934399376/" method="post" name="form_193466934399376" id="193466934399376" accept-charset="utf-8">
+<form (ngSubmit)="onSubmit()" class="ng-form" action="https://submit.jotform.com/submit/193466934399376/" method="post" name="form_193466934399376" id="193466934399376" accept-charset="utf-8">
 	<div role="main" class="form-all">
 		<ul class="form-section page-section">
 			<li class="form-line" data-type="control_textbox" id="id_3_5">
@@ -19,7 +19,8 @@
 				<div class="input-group">
 					<input class="form-control" placeholder="dd-mm-yyyy" [minDate]="minDate"
 						[maxDate]="maxDate"
-						name="dp" [(ngModel)]="calendar_date" ngbDatepicker #d="ngbDatepicker">
+						name="dp" [(ngModel)]="calendar_date" ngbDatepicker  #d="ngbDatepicker">
+
 					<div class="input-group-append">
 						<button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
 					</div>	  
@@ -28,7 +29,7 @@
 			<li class="form-line" data-type="control_textbox" id="id_3_6">
 				<label class="form-label form-label-left form-label-auto" id="label_3_6" for="input_3_6"> Ώρα Συμβάντος: </label>
 				<div id="cid_3.6" class="form-input">
-					<ngb-timepicker [(ngModel)]="time" ></ngb-timepicker>
+					<ngb-timepicker [(ngModel)]="time" name="time" ></ngb-timepicker>
 				</div>
 			</li>
 			
@@ -174,8 +175,10 @@
 
 			<li class="form-line" data-type="control_button" id="id_2">
 				<div id="cid_2" class="form-input-wide">
-					<div style="text-align:left" class="form-buttons-wrapper ">
-						<button type="button" class="btn btn-primary btn-sm">Send</button>
+					<div style="text-align:center" class="form-buttons-wrapper ">
+						<button id="input_2" type="submit" class="form-submit-button" data-component="button" data-content="">
+							Υποβολή
+						  </button>
 					</div>
 				</div>
 			</li>
