@@ -2,7 +2,7 @@
     <!-- <img src="/assets/tx.jpg" class="mainpagePic"> -->
     <img src="/assets/metro2.png" class="mainpagePic">
 </div>
-<div class="center3">
+<div class="center3" *ngIf="!whereToVar">
     <div class="whereTo">
         <div class="wtClass">
             Προς τα Που?
@@ -18,11 +18,19 @@
               <label for="inputPassword2" class="sr-only">To</label>
               <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Προορισμός" required>
             </div>
+            <!-- <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2"> -->
+            <input ngModel #amea="ngModel" type="radio" name="gender" value="amea" (click)="AmeA()"><h5 style="color: white;">ΑμεΑ</h5>
             <!-- <input type="radio" value="AMEA" formControlName="SPECIAL NEED"><span>ΑμεΑ</span> -->
             <br><br>
             <button type="submit" class="btn btn-primary mb-2 submitrout" (click)="findRout(afetiria, proorismos)">Εύρεση Διαδρομής</button>
           </form>
     </div>
+</div>
+
+<div class="center33" *ngIf="whereToVar">
+  <div class="whereTo">
+      
+  </div>
 </div>
 
 <div class="center4">
@@ -47,14 +55,14 @@
 </div>
 
 <div class="kentro">
-  <img src="/assets/fnl.png" class="kentroPic">
+  <!-- <img src="/assets/fnl.png" class="kentroPic"> -->
 </div>
 
 
-<div class="center5">
+<!-- <div class="center5">
   <div class="roianakoinoseon">
     <h2 style="display: flex; color: black; position: relative; justify-content: center; margin: auto;font-family: 'Times New Roman', Times, serif;font-size: 25px;">Ζωντανή Ροή Ανακοινώσεων</h2>
     
   </div>
-</div>
+</div> -->
 <!-- <audio autoplay="true" src="assets/song.mp3 "></audio> -->
