@@ -1,7 +1,8 @@
 .bg {
 	
 	position: relative;
-	background-image: url("/assets/blue_bg.jpg");
+	/* background-image: url("/assets/blue_bg.jpg"); */
+	background-color: rgb(255, 255, 255);
 	height: 1000px;
 	/* min-height: 100%; */
 	background-position: center;
