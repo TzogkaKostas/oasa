@@ -10,12 +10,18 @@ export class MainpageComponent implements OnInit {
 
   whereToVar = false;
   amea = false;
+  from: string;
+  to: string;
 
   constructor(
     private router: Router
   ) { }
 
   ngOnInit() {
+  }
+
+  searchFun(value){
+    window.location.reload();
   }
 
   AmeA(){
@@ -31,6 +37,8 @@ export class MainpageComponent implements OnInit {
     let newLink = "diadromi/" + from.value + "/" + to.value;
     console.log(newLink);
     this.whereToVar = true;
+    this.from = from;
+    this.to = to;
     // this.router.navigate([newLink]);
   }
 

@@ -11,21 +11,26 @@ import { ActivatedRoute } from '@angular/router';
 
 export class GlobalComponent implements OnInit {
 
+
   constructor(
-    private router: ActivatedRoute
+    private router: ActivatedRoute,
     //private httpservice: HttpService
+    private http: HttpService
   ) { }
 
   greek = true;
   language;
+  singedIn: boolean;
 
   ngOnInit() {
     this.greek = true;
+
   }
 
   changeLanguage(){
     this.greek = !this.greek;
     //window.location.reload();
   }
+
 
 }

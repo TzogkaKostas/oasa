@@ -1,1 +1,26 @@
-<p>sixnes-erotiseis works!</p>
+<!-- <p>sixnes-erotiseis works!</p> -->
+
+<!-- <div class="temp">
+
+</div> -->
+
+<br>
+<div *ngFor="let erwthsh of erwthseis; let ind = index">
+  <div class="zippy">
+    <div 
+      class="zippy-heading"
+      [class.expanded]="isExpanded[ind]"
+      (click)="toggle(erwthsh)"
+      >
+      {{ erwthsh[0] }}
+      <img *ngIf="!isExpanded[ind]" src="/assets/arrow_down.svg" class="arrowclass">
+      <img *ngIf="isExpanded[ind]" src="/assets/arrow_up.svg" class="arrowclass">
+    </div>
+    <div *ngIf="isExpanded[ind]" class="zippy-body" >
+      <ng-content></ng-content>
+      {{erwthsh[1]}}
+    </div>
+  </div>
+  <br>
+</div>
+<!-- <link href = "http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel = "stylesheet"> -->

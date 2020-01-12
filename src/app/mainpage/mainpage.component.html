@@ -1,6 +1,17 @@
+<!-- <form class="form-inline waves-light searchbar" mdbWavesEffect>
+  <div class="md-form mt-0">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+  </div>
+</form> -->
+
 <div class="center2">
     <!-- <img src="/assets/tx.jpg" class="mainpagePic"> -->
     <img src="/assets/metro2.png" class="mainpagePic">
+    <form class="form-inline waves-light searchbar" mdbWavesEffect>
+      <div class="md-form mt-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" (keydown.enter)="searchFun()">
+      </div>
+    </form> 
 </div>
 <div class="center3" *ngIf="!whereToVar">
     <div class="whereTo">
@@ -19,7 +30,7 @@
               <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Προορισμός" required>
             </div>
             <!-- <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2"> -->
-            <input ngModel #amea="ngModel" type="radio" name="gender" value="amea" (click)="AmeA()"><h5 style="color: white;">ΑμεΑ</h5>
+            <input ngModel #amea="ngModel" type="radio" name="ameaa" value="amea" (click)="AmeA()"><h5 style="color: white;">ΑμεΑ</h5>
             <!-- <input type="radio" value="AMEA" formControlName="SPECIAL NEED"><span>ΑμεΑ</span> -->
             <br><br>
             <button type="submit" class="btn btn-primary mb-2 submitrout" (click)="findRout(afetiria, proorismos)">Εύρεση Διαδρομής</button>
@@ -27,13 +38,50 @@
     </div>
 </div>
 
-<div class="center33" *ngIf="whereToVar">
-  <div class="whereTo">
-      
+<div *ngIf="!whereToVar" class="center5">
+  <div class="anakoinoseis">
+    <div style="cursor: pointer; width: 20%;"><a href=""><h2>Ανακοινώσεις</h2></a></div>
+    <a href=""><p style="cursor: pointer; color: black;" title="Πατήστε για άνοιγμα ανακοίνωσης">Random Announcement That i have to put for no reason</p></a>
+    <a href=""><p style="cursor: pointer; color: black;" title="Πατήστε για άνοιγμα ανακοίνωσης">Random Announcement That i have to put for no reason</p></a>
+    <a href=""><p style="cursor: pointer; color: black;" title="Πατήστε για άνοιγμα ανακοίνωσης">Random Announcement That i have to put for no reason</p></a>
+    <a href=""><p style="cursor: pointer; color: black;" title="Πατήστε για άνοιγμα ανακοίνωσης">Random Announcement That i have to put for no reason</p></a>
+
+
+    <nav aria-label="Page navigation example" class="anakoinoseisPaging">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link">Previous</a></li>
+        <li class="page-item"><a class="page-link">1</a></li>
+        <li class="page-item"><a class="page-link">2</a></li>
+        <li class="page-item"><a class="page-link">3</a></li>
+        <li class="page-item"><a class="page-link">Next</a></li>
+      </ul>
+    </nav>
   </div>
 </div>
 
-<div class="center4">
+<div class="center33" *ngIf="whereToVar">
+  <div class="whereTo">
+    <!-- <div [style.overflow]="'auto'" [style.height.px]="'450'"> -->
+      <div style="overflow:auto;height: 100%;">
+      <h5 class="p-3 mb-2 bg-dark text-white">{{from.value}} - {{to.value}} </h5>
+      <span class="d-block p-2 bg-info text-white" >1. Κατεύθυνση βόρεια στην Λεωφόρος Βασιλίσσης.</span>
+      <span class="d-block p-2 bg-secondary text-white">2. Πηγαίνετε σε στάση ΣΥΝΤΑΓΜΑ Bus και πάρτε το λεωφορείο 224 προς ΕΛ. ΒΕΝΙΖΕΛΟΥ - ΚΑΙΣΑΡΙΑΝΗ. Ακολουθήστε τη διαδρομή για 11 στάσεις.</span>
+      <span class="d-block p-2 bg-info text-white" >3. Κατεβείτε στη στάση 11η ΚΑΙΣΑΡΙΑΝΗΣ.</span>
+      <span class="d-block p-2 bg-secondary text-white">4. Κατεύθυνση ανατολικά στην Λεωφόρος Εθνικής Αντιστάσεως. Προχωρήστε για 93 μέτρα.</span>
+      <span class="d-block p-2 bg-info text-white" >5. Φτάνετε στην Λεωφόρος Εθνικής Αντιστάσεως. Ο προορισμός σας είναι στα δεξιά.</span>
+      <span class="d-block p-2 bg-secondary text-white">6. Πηγαίνετε σε στάση ΣΥΝΤΑΓΜΑ Bus και πάρτε το λεωφορείο 224 προς ΕΛ. ΒΕΝΙΖΕΛΟΥ - ΚΑΙΣΑΡΙΑΝΗ. Ακολουθήστε τη διαδρομή για 11 στάσεις.</span>
+      <div class="card">
+        <div class="card-body">
+          Συνολικός χρόνος: 111 λεπτά
+          <br>
+          Συνολική απόσταση: 22466 μέτρα
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="whereToVar" class="center4">
   <div class="anakoinoseis">
     <div style="cursor: pointer; width: 20%;"><a href=""><h2>Ανακοινώσεις</h2></a></div>
     <a href=""><p style="cursor: pointer; color: black;" title="Πατήστε για άνοιγμα ανακοίνωσης">Random Announcement That i have to put for no reason</p></a>

@@ -1,0 +1,30 @@
+<!-- <p>user works!</p> -->
+
+<form form class="form" #updateform="ngForm" (ngSubmit)="Update(item)" ngNativeValidate>      
+    
+    <div class="row">
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Name*</h5>
+                    <!-- <div class="card-text" *ngIf="item"> -->
+                        <div *ngIf="!willChange[0]">
+                            {{item.name}}          
+                            <button type="button" class="btn btn-primary float-right" (click)="editUser(0)">Change</button>
+                        </div>
+                        <div *ngIf="willChange[0]">
+                            <input ngModel name="Name" #Name="ngModel" id="Name" type="text" class="form-control" pattern="^[a-zA-Z0-9]*$" required>
+                            <div class="alert alert-danger" *ngIf="!Name.valid && Name.touched">
+                                <div *ngIf="Name.errors.required">Name is required.</div>
+                                <div *ngIf="Name.errors.pattern">Pattern is not correct.</div>
+                            </div>
+                            <button type="button" class="btn btn-primary float-right" (click)="setNewValue('name', Name, 0)">Update</button>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" type="Submit" [disabled]="!updateform.valid">Save Changes</button>
+    <button class="btn btn-danger" type="button" (click)="cancel()">Cancel</button>
+</form>

@@ -1,0 +1,75 @@
+
+.zippy { 
+    /* border: 1px solid rgb(0, 0, 0); */
+    border-radius: 1px;
+    
+    /* display: flex; */
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 65%;
+    height: auto;
+    top: 75px;
+    border-radius: 25px;
+
+}
+
+.zippy-heading { 
+    font-weight: bold;
+    background: #f0f0f0;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+
+}
+
+.zippy-body { 
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 25px;
+
+}
+
+.expanded { 
+    background: #f0f0f0;
+}
+
+.glyphicon { 
+    float: right;
+}
+
+/* body, html{
+    margin:0;
+    padding:0;
+    background:#fff;
+	background-image: url("/assets/blue_bg.jpg");
+
+} */
+
+/* .supernova .form-all, .form-all {
+    background-color:; 
+    border: 1px solid transparent;
+} */
+/* .supernova {
+    background-color: url("/assets/blue_bg.jpg");
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 65%;
+    top: 75px;   
+} */
+
+.arrowclass {
+    /* border: 1px solid rgb(255, 21, 165);
+    border-radius: 2px; */
+
+    display: flex;
+    position: absolute;
+    margin: auto;
+
+    display: inline-block;
+    width: 35px;
+    right: 5%;
+}

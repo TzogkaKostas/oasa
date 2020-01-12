@@ -1,0 +1,43 @@
+.apolesthenta {
+    border-radius: 1px;
+    
+    /* display: flex; */
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 65%;
+    height: 53%;
+    top: 75px;
+    border-radius: 25px;
+    background: rgb(255, 255, 255);
+}
+
+.form {
+    position: relative;
+    margin: auto;
+    width: 95%;
+    /* height: auto; */
+    top: 20px;
+    border-radius: 25px;
+}
+
+.epikoinwnia{
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: 65%;
+    height: 20%;
+    top: 75px;
+    border-radius: 25px;
+    background: rgb(255, 255, 255);
+}
+
+.content1 {
+    position: relative;
+    margin: auto;
+    width: 95%;
+    /* height: auto; */
+    top: 20px;
+    border-radius: 25px;
+}
+

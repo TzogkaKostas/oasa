@@ -1,0 +1,16 @@
+<!-- <p>login works!</p> -->
+<form class="form-signin lgg" #f="ngForm" (ngSubmit)="signIn(f.value)">
+    <h2 class="form-signin-heading">Είσοδος</h2>
+    <div *ngIf="invalidLogin" class="alert alert-danger">Μη έγκυρο όνομα χρήστη και/η κωδικός πρόσβασης.</div>
+    <label for="inputusername" class="sr-only">Όνομα χρήστη</label>
+    <input type="username" id="inputusername" name="username" ngModel class="form-control" placeholder="Όνομα χρήστη" required autofocus>
+    <label for="inputPassword" class="sr-only">Κωδικός πρόσβασης</label>
+    <input type="password" id="inputPassword" name="password" ngModel class="form-control" placeholder="Κωδικός πρόσβασης" required>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Είσοδος</button>
+  
+    <br>
+    <ul>
+      <li><a routerLink="/signup">Όχι μέλος; Είσοδος</a></li>
+      <li><a routerLink="">Αρχική σελίδα</a></li>
+    </ul>
+  </form>

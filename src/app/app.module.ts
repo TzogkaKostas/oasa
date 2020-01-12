@@ -12,14 +12,16 @@ import { TimesEisitirionComponent } from './times-eisitirion/times-eisitirion.co
 import { ErotimatologioComponent } from './erotimatologio/erotimatologio.component';
 import { OrarioLeitourgiasComponent } from './orario-leitourgias/orario-leitourgias.component';
 import { FormaParapononComponent } from './forma-paraponon/forma-paraponon.component';
-import { AgoraEisitirwnComponent } from './agora-eisitirwn/agora-eisitirwn.component';
-import { SuccessSubmitComponent } from './success-submit/success-submit.component';
-import { FortisiKartasComponent } from './fortisi-kartas/fortisi-kartas.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { EvresiDiadromisComponent } from './evresi-diadromis/evresi-diadromis.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NuxterinaComponent } from './nuxterina/nuxterina.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ApolesthentaComponent } from './apolesthenta/apolesthenta.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -34,16 +36,18 @@ import { NuxterinaComponent } from './nuxterina/nuxterina.component';
     FormaParapononComponent,
     EvresiDiadromisComponent,
     NuxterinaComponent,
-    AgoraEisitirwnComponent,	
-    SuccessSubmitComponent,	
-    FortisiKartasComponent
+    ApolesthentaComponent,
+    LoginComponent,
+    SignupComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     HttpService

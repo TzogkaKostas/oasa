@@ -1,1 +1,354 @@
-<p>erotimatologio works!</p>
+<!-- <p>erotimatologio works!</p> -->
+
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> -->
+<br>
+<html class="supernova">
+
+<head>
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Online Complaint Form</title>
+<link href="https://cdn.jotfor.ms/static/formCss.css?3.3.14458" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="https://cdn.jotfor.ms/css/styles/nova.css?3.3.14458" /> -->
+</head>
+
+
+<body>
+<!-- <div class="columns">  
+  <form action="/action_page.php">
+    <p>Please select your gender:</p>
+      <input type="radio" name="gender" value="male"> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other<br>  
+    
+    <p>Please select your age:</p>
+      <input type="radio" name="age" value="30"> 0 - 30<br>
+      <input type="radio" name="age" value="60"> 31 - 60<br>
+      <input type="radio" name="age" value="100"> 61 - 100<br>  
+    
+      <input type="submit" value="Submit">
+    </form>
+  
+</div> -->
+<!-- 
+<div class="row">
+  <div class="col-sm-11">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Please select your gender:</h5>
+              <input type="radio" name="gender" value="male"> Male<br>
+              <input type="radio" name="gender" value="female"> Female<br>
+              <input type="radio" name="gender" value="other"> Other<br> 
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-11">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Ερώτηση 2</h5>
+              <input type="radio" name="age" value="30"> 0 - 30<br>
+              <input type="radio" name="age" value="60"> 31 - 60<br>
+              <input type="radio" name="age" value="100"> 61 - 100<br>  
+          </div>
+      </div>
+  </div>
+</div><br> -->
+
+<!-- <div class="row">
+  <div class="col-sm-11">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Please select your gender:</h5>
+              <input type="radio" name="gender" value="male"> Male<br>
+              <input type="radio" name="gender" value="female"> Female<br>
+              <input type="radio" name="gender" value="other"> Other<br> 
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-11">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Ερώτηση 2</h5>
+              <input type="radio" name="age" value="30"> 0 - 30<br>
+              <input type="radio" name="age" value="60"> 31 - 60<br>
+              <input type="radio" name="age" value="100"> 61 - 100<br>  
+          </div>
+      </div>
+  </div>
+</div><br>
+
+<div class="row">
+  <div class="col-sm-5">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Please select your gender:</h5>
+              <input type="radio" name="gender" value="male"> Male<br>
+              <input type="radio" name="gender" value="female"> Female<br>
+              <input type="radio" name="gender" value="other"> Other<br> 
+          </div>
+      </div>
+  </div>
+  <div class="col-sm-5">
+      <div class="card">
+          <div class="card-body">
+              <h5 class="card-title">Ερώτηση 2</h5>
+              <input type="radio" name="age" value="30"> 0 - 30<br>
+              <input type="radio" name="age" value="60"> 31 - 60<br> 
+              <input type="radio" name="age" value="100"> 61 - 100<br>  
+          </div>
+      </div>
+  </div>
+</div><br> -->
+
+<!-- <div class="row"> -->
+
+<!-- <div>
+  <input id="male" class="custom-control-input" ngModel required>
+  <label class="custom-control-label" for="male">Male</label>
+</div> -->
+
+<form class="form" #questionform="ngForm" (ngSubmit)="erotimatologio(questionform.value)" ngNativeValidate>  
+  <br>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Ηλικία</h5>
+        <input type="radio" name="age" value="12-18" id="12-18" class="custom-control-input" ngModel class="btn btn-primary"> 12-18 <br>
+        <input type="radio" name="age" value="19-26" id="19-26" class="custom-control-input" ngModel class="btn btn-primary"> 19-26 <br>
+        <input type="radio" name="age" value="26-40" id="26-40" class="custom-control-input" ngModel class="btn btn-primary"> 26-40 <br>
+        <input type="radio" name="age" value="40-65" id="40-65" class="custom-control-input" ngModel class="btn btn-primary" > 40-65 <br>
+        <input type="radio" name="age" value=">65" id=">65" class="custom-control-input" ngModel class="btn btn-primary"> >65 <br>
+      </div>
+    </div>
+  </div>
+  <br>
+  
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Φύλο</h5>
+        <input type="radio" name="gender" value="male" class="custom-control-input" ngModel class="btn btn-primary"> Άνδρας <br>
+        <input type="radio" name="gender" value="female" class="custom-control-input" ngModel class="btn btn-primary"> Γυναίκα <br>
+        <input type="radio" name="gender" value="other" class="custom-control-input" ngModel class="btn btn-primary"> Άλλο <br>
+    </div>
+  </div>
+</div>
+<br>
+<!-- <div class="row"> -->
+  <!-- <div class="w-100"></div> -->
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Τόπος διαμονής:</h5>
+        <input type="radio" name="toposDiamonis" value="entos" class="custom-control-input" ngModel class="btn btn-primary"> Εντός Λεκανοπεδίου Αττικής <br>
+        <input type="radio" name="toposDiamonis" value="ektos" class="custom-control-input" ngModel class="btn btn-primary"> Εκτός Λεκανοπεδίου Αττικής <br>
+        </div>
+      </div>
+  </div>
+  <br>
+<!-- </div>
+<div class="row"> -->
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Ποιό από τα παρακάτω μέσα αστικής συγκοινωνίας χρησιμοποιείτε; </h5>
+        <input type="radio" name="mesa" value="leoforeio" class="custom-control-input" ngModel class="btn btn-primary"> Λεωφορείο <br>
+        <input type="radio" name="mesa" value="trolei" class="custom-control-input" ngModel class="btn btn-primary"> Τρόλεϊ <br>
+        <input type="radio" name="mesa" value="metro" class="custom-control-input" ngModel class="btn btn-primary"> Μετρό <br>
+        <input type="radio" name="mesa" value="ilektriko" class="custom-control-input" ngModel class="btn btn-primary"> Ηλεκτρικό <br>
+        <input type="radio" name="mesa" value="tram" class="custom-control-input" ngModel class="btn btn-primary"> Τραμ <br>
+        <input type="radio" name="mesa" value="proastiakos" class="custom-control-input" ngModel class="btn btn-primary"> Προαστιακός <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο συχνά χρησιμοποιείτε κάποιο/α μέσα αστικών συγκοινωνιών από τα παραπάνω; </h5>
+        <input type="radio" name="syxnhtothaXryshs" value="2-3" class="custom-control-input" ngModel class="btn btn-primary" > Καθημερινά 2-3 φορές την εβδομάδα <br>
+        <input type="radio" name="syxnhtothaXryshs" value="1" class="custom-control-input" ngModel class="btn btn-primary" > 1 φορά την εβδομάδα 2-3 φορές τον μήνα: <br>
+        <input type="radio" name="syxnhtothaXryshs" value="ligotero" class="custom-control-input" ngModel class="btn btn-primary"> Λιγότερο συχνά <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε: Από τις υπηρεσίες που προσφέρουν οι Αστικές Συγκοινωνίες στη περιοχή σας; </h5>
+        <input type="radio" name="yphresiesRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="yphresiesRate" value="ligo" class="custom-control-input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="yphresiesRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="yphresiesRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="yphresiesRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε: Από τη συχνότητα των δρομολογίων των Συγκ. μέσων που χρησιμοποιείτε; </h5>
+        <input type="radio" name="syxnothtaRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="syxnothtaRate" value="ligo" class="custom-control-input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="syxnothtaRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="syxnothtaRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="syxnothtaRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε: Από την αξιοπιστία των δρομολογίων των Συγκ. μέσων που χρησιμοποιείτε; </h5>
+        <input type="radio" name="axiopistiaRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="axiopistiaRate" value="ligo" class="custom-control  -input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="axiopistiaRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="axiopistiaRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="axiopistiaRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε: Από την πρόσβασή σας στις στάσεις ή στους σταθμούς των Συγκ. Μέσων που χρησιμοποιείτε; </h5>
+        <input type="radio" name="prosvashRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="prosvashRate" value="ligo" class="custom-control-input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="prosvashRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="prosvashRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="prosvashRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε από: Τις συνθήκες αναμονής (Καθαριότητα, άνεση, ασφάλεια) στις στάσεις ή στους σταθμούς των συγκ. μέσων που χρησιμοποιείτε; </h5>
+        <input type="radio" name="sinthikesRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="sinthikesRate" value="ligo" class="custom-control-input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="sinthikesRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="sinthikesRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="sinthikesRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Από που ενημερώνεστε για τις υπηρεσίες που προσφέρουν οι Αστικές Συγκοινωνίες ή για τις αλλαγές των δρομολογίων; </h5>
+        <input type="checkbox" name="enimerosiRate" value="tv_radio_press" class="custom-control-input" ngModel class="btn btn-primary"> Τηλεόραση - Ραδιόφωνο - Εφημερίδες <br>
+        <input type="checkbox" name="enimerosiRate" value="185" class="custom-control-input" ngModel class="btn btn-primary"> Από το πληροφοριακό κέντρο 185 του ΟΑΣΑ <br>
+        <input type="checkbox" name="enimerosiRate" value="thl_kentra" class="custom-control-input" ngModel class="btn btn-primary"> Από τα τηλ. κέντρα άλλων συγκ. εταιρειών (π.χ ΕΘΕΛ, ΗΣΑΠ...) <br>
+        <input type="checkbox" name="enimerosiRate" value="istoselida" class="custom-control-input" ngModel class="btn btn-primary"> Από την ιστοσελίδα του ΟΑΣΑ (www.oasa.gr) <br>
+        <input type="checkbox" name="enimerosiRate" value="istoselides_allwn" class="custom-control-input" ngModel class="btn btn-primary"> Από τις ιστοσελίδες άλλων Συγκ. Εταιρειών <br>
+        <input type="checkbox" name="enimerosiRate" value="proswpiko" class="custom-control-input" ngModel class="btn btn-primary"> Από το προσωπικό των αστικών συγκοινωνιών (Σταθμάρχες, Οδηγούς ...) <br>
+        <input type="checkbox" name="enimerosiRate" value="gnwstous" class="custom-control-input" ngModel class="btn btn-primary"> Από γνωστούς ή συνεπιβάτες σας <br>
+        <input type="checkbox" name="enimerosiRate" value="den_enieronomai" class="custom-control-input" ngModel class="btn btn-primary"> ΔΕΝ ενημερώνομαι <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε: Από τις πηγές ενημέρωσης που έχετε χρησιμοποιήσει; </h5>
+        <input type="radio" name="enimerosiRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="enimerosiRate" value="ligo" class="custom-control-input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="enimerosiRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="enimerosiRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="enimerosiRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε: Από την συμπεριφορά του Προσωπικού (Οδηγούς, εκδότες, σταθμάρχες, ελεγχτές, προσωπικό τηλ. εξυπηρέτησης); </h5>
+        <input type="radio" name="simperiforaRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="simperiforaRate" value="ligo" class="custom-control-input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="simperiforaRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="simperiforaRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="simperiforaRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε: Από τα υπάρχοντα σημεία πώλησης εισιτηρίων και καρτών; </h5>
+        <input type="radio" name="shmeiaPolhshsRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="shmeiaPolhshsRate" value="ligo" class="custom-control-input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="shmeiaPolhshsRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="shmeiaPolhshsRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="shmeiaPolhshsRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε: Από τους διαθέσιμους τύπους εισιτηρίων & καρτών; </h5>
+        <input type="radio" name="typoiEisitiriwnRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="typoiEisitiriwnRate" value="ligo" class="custom-control-input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="typoiEisitiriwnRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="typoiEisitiriwnRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="typoiEisitiriwnRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Έχετε επικοινωνήσει με οποιοδήποτε τρόπο με τον ΟΑΣΑ; </h5>
+        <input type="radio" name="epikoinwniaOasa" value="nai" class="custom-control-input" ngModel class="btn btn-primary"> Ναι <br>
+        <input type="radio" name="epikoinwniaOasa" value="oxi" class="custom-control-input" ngModel class="btn btn-primary"> Οχι <br>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Πόσο ικανοποιημένοι είστε από την επικοινωνία που είχατε με τον ΟΑΣΑ; </h5>
+        <input type="radio" name="ikanopoihshEpikoinwniaRate" value="katholou" class="custom-control-input" ngModel class="btn btn-primary"> Καθόλου <br>
+        <input type="radio" name="ikanopoihshEpikoinwniaRate" value="ligo" class="custom-control-input" ngModel class="btn btn-primary"> Λίγο <br>
+        <input type="radio" name="ikanopoihshEpikoinwniaRate" value="arketa" class="custom-control-input" ngModel class="btn btn-primary"> Αρκετά <br>
+        <input type="radio" name="ikanopoihshEpikoinwniaRate" value="poly" class="custom-control-input" ngModel class="btn btn-primary"> Πολύ <br>
+        <input type="radio" name="ikanopoihshEpikoinwniaRate" value="den_gnwrizw" class="custom-control-input" ngModel class="btn btn-primary"> Δεν γνωρίζω - Δεν απαντώ <br>
+      </div>
+    </div>
+  </div>
+  <br>
+  <!-- <button class="btn btn-primary" type="Submit" [disabled]="!questionform.valid"  > Καταχώρηση</button> -->
+  
+  <button class="btn btn-outline-danger float-right" type="button" (click)="cancel()" > Ακύρωση </button>
+  <button type="Submit" class="btn btn-outline-info float-right" > Καταχώρηση </button><br><br><br>
+
+</form>
+<!-- </div> -->
+
+</body>
+
+

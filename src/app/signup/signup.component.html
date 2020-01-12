@@ -1,0 +1,76 @@
+<!-- <p>signup works!</p> -->
+<form class="form-signin lgg" #f="ngForm" (ngSubmit)="signUp(f.value)">
+    <h2 class="form-signin-heading">Φόρμα εγγραφής:</h2>
+    <br>
+  
+    <!--<div *ngIf="!pass1_2" class="alert alert-danger">Must fill the two password fields.</div>
+    <div *ngIf="passMatch" class="alert alert-danger">Passwords don't match.</div>
+    <div *ngIf="invalidSignup" class="alert alert-danger">Invalid username and/or password.</div>
+    <div *ngIf="invalidSignup" class="alert alert-danger">Invalid username and/or password.</div>
+    <div *ngIf="invalidSignup" class="alert alert-danger">Invalid username and/or password.</div>-->
+  
+    <div class="alert alert-danger" *ngIf="invalidSignUp">Το όνομα χρήστη ή ο κωδικός πρόσβασης. </div>
+  
+    <!-- <label for="inputUName" class="sr-only">First Name</label>
+    <input type="name" id="inputUName" name="user_id" ngModel #UserName="ngModel" class="form-control" placeholder="Username" pattern="^[a-zA-Z0-9]*" required autofocus>
+    <div class="alert alert-danger" *ngIf="!UserName.valid && UserName.touched">Username is required.</div> -->
+  
+    <label for="inputName" class="sr-only">Όνομα</label>
+    <input type="name" id="inputName" name="name" ngModel #firstName="ngModel" class="form-control" placeholder="Όνομα" required autofocus>
+    <div class="alert alert-danger" *ngIf="!firstName.valid && firstName.touched">Απαιτείται το Όνομα.</div>
+  
+    <label for="inputSName" class="sr-only">Επίθετο</label>
+    <input type="name" id="inputSName" name="surname" ngModel #lastName="ngModel" class="form-control" placeholder="Επίθετο" required autofocus>
+    <div class="alert alert-danger" *ngIf="!lastName.valid && lastName.touched">Απαιτείται το Επίθετο.</div>
+  
+    <label for="inputEmail" class="sr-only">Διεύθυνση Email</label>
+    <input type="email" id="inputEmail" name="email" ngModel #email="ngModel" class="form-control" placeholder="Διεύθυνση Email" required autofocus>
+    <div class="alert alert-danger" *ngIf="!email.valid && email.touched">Απαιτείται το Email.</div>
+  
+    <label for="inputPassword1" class="sr-only">Κωδικός χρήστη</label>
+    <input type="password" id="inputPassword1" name="password" ngModel #password1="ngModel" class="form-control" minlength="6" placeholder="Κωδικός χρήστη" required>
+    <div class="alert alert-danger" *ngIf="!password1.valid && password1.touched">Απαιτείται κωδικός χρήστη.</div>
+  
+    <label for="inputPassword2" class="sr-only">Επιβεβαίωση κωδικού χρήστη</label>
+    <input type="password" id="inputPassword2" name="password2" ngModel #password2="ngModel" class="form-control" placeholder="Επιβεβαίωση κωδικού χρήστη" required>
+    <div class="alert alert-danger" *ngIf="!password2.valid && password2.touched">Απαιτείται επιβεβαίωση κωδικού χρήστη.</div>
+    <div class="alert alert-danger" *ngIf="(password1.value != password2.value) && password2.touched">Οι κωδικοί δεν ταιριάζουν.</div>
+  
+    <!-- <label for="inputPhone" class="sr-only">Phone Number</label>
+    <input type="name" id="inputPhone" name="telephone" ngModel maxlength="10" minlength="10" pattern="[0-9]*" #UserPhone="ngModel" class="form-control" placeholder="Phone Number" required autofocus>
+      <div class="alert alert-danger" *ngIf="!UserPhone.valid && UserPhone.touched">
+      <div class="alert alert-danger" *ngIf="UserPhone.errors.required">Phone Number is required.</div>
+      <div class="alert alert-danger" *ngIf="UserPhone.errors.maxlength || UserPhone.errors.minlength">Phone Number must be 10-digits.</div>
+      <div class="alert alert-danger" *ngIf="UserPhone.errors.pattern">Phone Number can't include/symbols letters.</div>
+    </div>
+  
+    <label for="inputAddress" class="sr-only">Address</label>
+    <input type="name" id="inputAddress" name="address" ngModel #Address="ngModel" class="form-control" placeholder="Address" required autofocus>
+    <div class="alert alert-danger" *ngIf="!Address.valid && Address.touched">Address is required.</div>
+  
+    <label for="inputLongitude" class="sr-only">Longitude</label>
+    <input type="number" id="inputLongitude" name="longitude" ngModel #Longitude="ngModel" class="form-control" placeholder="Longitude" required autofocus>
+    <div class="alert alert-danger" *ngIf="!Longitude.valid && Longitude.touched">Longitude is required.</div>
+  
+    <label for="inputLatitude" class="sr-only">Latitude</label>
+    <input type="number" id="inputLatitude" name="latitude" ngModel #Latitude="ngModel" class="form-control" placeholder="Latitude" required autofocus>
+    <div class="alert alert-danger" *ngIf="!Latitude.valid && Latitude.touched">Latitude is required.</div> -->
+  
+    <!-- <label for="inputtaxKod" class="sr-only">taxKod</label>
+    <input type="number" id="inputtaxKod" name="taxKod" ngModel pattern="[0-9]*" #taxKod="ngModel" class="form-control" placeholder="taxKod" required autofocus>
+    <div class="alert alert-danger" *ngIf="!taxKod.valid && taxKod.touched">Taxidromikos kodikas is required.</div>
+    <div class="alert alert-danger" *ngIf="taxKod.errors.pattern">O taxidromikos kodikas can't include/symbols letters.</div> -->
+  
+    <!-- <label for="inputAFM" class="sr-only">AFM</label>
+    <input type="name" id="inputAFM" name="afm" ngModel maxlength="20" minlength="8" #AFM="ngModel" class="form-control" placeholder="A.F.M." required autofocus>
+    <div class="alert alert-danger" *ngIf="!AFM.valid && AFM.touched">A.F.M. is required(8-20 characters).</div>
+    <div class="alert alert-danger" *ngIf="AFM.errors.pattern">A.F.M. can't include/symbols letters.</div> -->
+  
+  
+    <button class="btn btn-lg btn-primary btn-block" [disabled]="!f.valid || (password1.value != password2.value)" type="submit">Εγγραφή</button>
+    <br>
+    <ul>
+      <li><a routerLink="/login">Ήδη μέλος; Είσοδος</a></li>
+      <li><a routerLink="">Αρχική Σελίδα</a></li>
+    </ul>
+  </form>
