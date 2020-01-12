@@ -12,6 +12,9 @@ import { TimesEisitirionComponent } from './times-eisitirion/times-eisitirion.co
 import { ErotimatologioComponent } from './erotimatologio/erotimatologio.component';
 import { OrarioLeitourgiasComponent } from './orario-leitourgias/orario-leitourgias.component';
 import { FormaParapononComponent } from './forma-paraponon/forma-paraponon.component';
+import { AgoraEisitirwnComponent } from './agora-eisitirwn/agora-eisitirwn.component';
+import { SuccessSubmitComponent } from './success-submit/success-submit.component';
+import { FortisiKartasComponent } from './fortisi-kartas/fortisi-kartas.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { EvresiDiadromisComponent } from './evresi-diadromis/evresi-diadromis.component';
@@ -30,7 +33,10 @@ import { NuxterinaComponent } from './nuxterina/nuxterina.component';
     OrarioLeitourgiasComponent,
     FormaParapononComponent,
     EvresiDiadromisComponent,
-    NuxterinaComponent
+    NuxterinaComponent,
+    AgoraEisitirwnComponent,	
+    SuccessSubmitComponent,	
+    FortisiKartasComponent
   ],
   imports: [
     BrowserModule,

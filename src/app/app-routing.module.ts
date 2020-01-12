@@ -9,6 +9,8 @@ import { OrarioLeitourgiasComponent } from './orario-leitourgias/orario-leitourg
 import { FormaParapononComponent } from './forma-paraponon/forma-paraponon.component';
 import { EvresiDiadromisComponent } from './evresi-diadromis/evresi-diadromis.component';
 import { NuxterinaComponent } from './nuxterina/nuxterina.component';
+import { SuccessSubmitComponent } from './success-submit/success-submit.component';
+import { AgoraEisitirwnComponent } from './agora-eisitirwn/agora-eisitirwn.component';	
 
 const routes: Routes = [
   { path: '', component: MainpageComponent },
@@ -19,7 +21,9 @@ const routes: Routes = [
   { path: 'orario', component: OrarioLeitourgiasComponent },
   { path: 'parapona', component: FormaParapononComponent },
   { path: 'nuxterina', component: NuxterinaComponent },
-  { path: 'diadromi/:from/:to', component: EvresiDiadromisComponent}
+  { path: 'diadromi/:from/:to', component: EvresiDiadromisComponent},
+  { path: 'agora', component: AgoraEisitirwnComponent },	
+  { path: 'success_submit', component: SuccessSubmitComponent }
 ];
 
 @NgModule({

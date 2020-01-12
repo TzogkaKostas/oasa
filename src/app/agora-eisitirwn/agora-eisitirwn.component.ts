@@ -13,7 +13,7 @@ export class AgoraEisitirwnComponent implements OnInit {
   myarray: any[][] = [[0, 1], [0, 1], [0, 1], [0, 1], [0, 1]];
   ticket_costs = [1.40, 0.70, 4.50, 9.00, 6.00];
   total_sum: any;
-  first_name: any;
+  first_name_var: any;
   last_name: any;
   credit_card_number: any;
   security_code: any;
@@ -49,8 +49,6 @@ export class AgoraEisitirwnComponent implements OnInit {
   }
 
   calculate_total_sum() {
-    console.log(this.expiration_month);
-    console.log(this.expiration_year);
     this.total_sum = 0;
     for (let i = 0; i < 5; i++) {
       this.total_sum += this.myarray[i][0]*this.myarray[i][1]*this.ticket_costs[i];
@@ -67,5 +65,17 @@ export class AgoraEisitirwnComponent implements OnInit {
 
   onSubmit() {
       this.router.navigate(['/success_submit']);
+  }
+
+  plus(event: any) {
+    this.myarray[Number(event.target.id) - 1][1] += 1;
+    this.calculate_total_sum();
+  }
+
+  minus(event: any) {
+    if (this.myarray[Number(event.target.id) - 1][1] > 0) {
+      this.myarray[Number(event.target.id) - 1][1] -= 1;
+    }
+    this.calculate_total_sum();
   }
 }
