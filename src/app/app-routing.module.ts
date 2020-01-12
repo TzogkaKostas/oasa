@@ -13,6 +13,8 @@ import { ApolesthentaComponent } from './apolesthenta/apolesthenta.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserComponent } from './user/user.component';
+import { SuccessSubmitComponent } from './success-submit/success-submit.component';
+import { AgoraEisitirwnComponent } from './agora-eisitirwn/agora-eisitirwn.component';
 
 const routes: Routes = [
   { path: '', component: MainpageComponent },
@@ -28,7 +30,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'user', component: UserComponent},
-
+  { path: 'agora', component: AgoraEisitirwnComponent },
+  { path: 'success_submit', component: SuccessSubmitComponent }
 ];
 
 @NgModule({

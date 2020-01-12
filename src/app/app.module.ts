@@ -22,6 +22,10 @@ import { ApolesthentaComponent } from './apolesthenta/apolesthenta.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UserComponent } from './user/user.component';
+import { AgoraEisitirwnComponent } from './agora-eisitirwn/agora-eisitirwn.component';
+import { SuccessSubmitComponent } from './success-submit/success-submit.component';
+import { FortisiKartasComponent } from './fortisi-kartas/fortisi-kartas.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +43,10 @@ import { UserComponent } from './user/user.component';
     ApolesthentaComponent,
     LoginComponent,
     SignupComponent,
-    UserComponent
+    UserComponent,
+    AgoraEisitirwnComponent,
+    SuccessSubmitComponent,
+    FortisiKartasComponent
   ],
   imports: [
     BrowserModule,

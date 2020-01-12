@@ -50,7 +50,7 @@ export class HttpService {
 
   isLoggedIn(){
     // return tokenNotExpired('token');//this does what the lines bellow does
-    return true;
+    return false;
   }
 
   updateUserInfo(itemData){
