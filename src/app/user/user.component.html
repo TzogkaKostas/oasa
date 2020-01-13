@@ -1,30 +1,134 @@
 <!-- <p>user works!</p> -->
-
+<br>
+<div class="center">
 <form form class="form" #updateform="ngForm" (ngSubmit)="Update(item)" ngNativeValidate>      
-    
-    <div class="row">
-        <div class="col-sm-5">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Name*</h5>
-                    <!-- <div class="card-text" *ngIf="item"> -->
-                        <div *ngIf="!willChange[0]">
-                            {{item.name}}          
-                            <button type="button" class="btn btn-primary float-right" (click)="editUser(0)">Change</button>
-                        </div>
-                        <div *ngIf="willChange[0]">
-                            <input ngModel name="Name" #Name="ngModel" id="Name" type="text" class="form-control" pattern="^[a-zA-Z0-9]*$" required>
-                            <div class="alert alert-danger" *ngIf="!Name.valid && Name.touched">
-                                <div *ngIf="Name.errors.required">Name is required.</div>
-                                <div *ngIf="Name.errors.pattern">Pattern is not correct.</div>
-                            </div>
-                            <button type="button" class="btn btn-primary float-right" (click)="setNewValue('name', Name, 0)">Update</button>
-                        </div>
-                    <!-- </div> -->
-                </div>
+<h2 style="padding: 25px;">Πληροφορίες Χρήστη: </h2>
+<!-- <br> -->
+<div class="row">
+    <div class="col-sm-5" style="padding: 25px;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Όνομα*</h5>
+                <!-- <div class="card-text" *ngIf="item"> -->
+                    <div *ngIf="!willChange[0]">
+                        {{item.name}}          
+                        <button type="button" class="btn btn-primary float-right" (click)="editUser(0)">Αλλαγή</button>
+                    </div>
+                    <div *ngIf="willChange[0]">
+                        <input ngModel name="Name" #Name="ngModel" id="Name" type="text" class="form-control" pattern="^[α-ωΑ-Ω0-9]*$" placeholder="Όνομα" required>
+                        <div class="alert alert-danger" *ngIf="!Name.valid && Name.touched">
+                            <div *ngIf="Name.errors.required">Το Όνομα δεν είναι έγκυρο.</div>
+                            <div *ngIf="Name.errors.pattern">Οι χαρακτήρες δεν είναι έγκυροι.</div>
+                        </div><br>
+                        <button type="button" class="btn btn-danger float-right" (click)="editUser(0)">Ακύρωση</button>
+                        <button type="button" class="btn btn-primary float-right" (click)="setNewValue('name', Name, 0)">Ενημέρωση</button>
+                    </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
-    <button class="btn btn-primary" type="Submit" [disabled]="!updateform.valid">Save Changes</button>
-    <button class="btn btn-danger" type="button" (click)="cancel()">Cancel</button>
+    <!-- </div> -->
+    <div class="col-sm-5" style="padding: 25px;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Επίθετο*</h5>
+                <!-- <div class="card-text" *ngIf="item"> -->
+                    <div *ngIf="!willChange[1]">
+                        {{item.surname}}          
+                        <button type="button" class="btn btn-primary float-right" (click)="editUser(1)">Αλλαγή</button>
+                    </div>
+                    <div *ngIf="willChange[1]">
+                        <input ngModel name="Surname" #Surname="ngModel" id="Surname" type="text" class="form-control" placeholder="Επίθετο" pattern="^[α-ωΑ-Ω0-9]*$" required>
+                        <div class="alert alert-danger" *ngIf="!Surname.valid && Surname.touched">
+                            <div *ngIf="Surname.errors.required">Το Έπιθετο δεν είναι έγκυρο.</div>
+                            <div *ngIf="Surname.errors.pattern">Οι χαρακτήρες δεν είναι έγκυροι.</div>
+                        </div><br>
+                        <button type="button" class="btn btn-danger float-right" (click)="editUser(1)">Ακύρωση</button>
+                        <button type="button" class="btn btn-primary float-right" (click)="setNewValue('surname', Surname, 1)">Ενημέρωση</button>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-5" style="padding: 25px;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Όνομα χρήστη*</h5>
+                <!-- <div class="card-text" *ngIf="item"> -->
+                    <div *ngIf="!willChange[2]">
+                        {{item.username}}          
+                        <button type="button" class="btn btn-primary float-right" (click)="editUser(2)">Αλλαγή</button>
+                    </div>
+                    <div *ngIf="willChange[2]">
+                        <input ngModel name="Username" #Username="ngModel" id="Username" type="text" class="form-control"  placeholder="Όνομα χρήστη" pattern="^[a-zA-z0-9]*$" required>
+                        <div class="alert alert-danger" *ngIf="!Username.valid && Username.touched">
+                            <div *ngIf="Username.errors.required">Το Όνομα χρήστη δεν είναι έγκυρο.</div>
+                            <div *ngIf="Username.errors.pattern">Οι χαρακτήρες δεν είναι έγκυροι.</div>
+                        </div><br>
+                        <button type="button" class="btn btn-danger float-right" (click)="editUser(2)">Ακύρωση</button>
+                        <button type="button" class="btn btn-primary float-right" (click)="setNewValue('username', Username, 2)">Ενημέρωση</button>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <div class="col-sm-5" style="padding: 25px;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Email*</h5>
+                <!-- <div class="card-text" *ngIf="item"> -->
+                    <div *ngIf="!willChange[3]">
+                        {{item.email}}          
+                        <button type="button" class="btn btn-primary float-right" (click)="editUser(3)">Αλλαγή</button>
+                    </div>
+                    <div *ngIf="willChange[3]">
+                        <input ngModel name="Email" #Email="ngModel" id="Email" type="email" class="form-control"  placeholder="Διεύθυνση Email" required>
+                        <div class="alert alert-danger" *ngIf="!Email.valid && Email.touched">
+                            <div *ngIf="Email.errors.required">Το Email δεν είναι έγκυρο.</div>
+                        </div><br>
+                        <button type="button" class="btn btn-danger float-right" (click)="editUser(3)">Ακύρωση</button>
+                        <button type="button" class="btn btn-primary float-right" (click)="setNewValue('email', Email, 3)">Ενημέρωση</button>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-5" style="padding: 25px;">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Κωδικός χρήστη*</h5>
+                <!-- <div class="card-text" *ngIf="item"> -->
+                    <div *ngIf="!willChange[4]">
+                        {{item.password}}          
+                        <button type="button" class="btn btn-primary float-right" (click)="editUser(4)">Αλλαγή</button>
+                    </div>
+                    <div *ngIf="willChange[4]">
+                        <input ngModel name="Password" #Password="ngModel" id="Password" type="password" placeholder="Kωδικος χρήστη" class="form-control" required>
+                        <div class="alert alert-danger" *ngIf="!Password.valid && Password.touched">
+                            <div *ngIf="Password.errors.required">O Κωδικός χρήστη δεν είναι έγκυρο.</div>
+                        </div>
+                        <br>
+                        <input type="password" id="inputPassword2" name="password2" ngModel #password2="ngModel" class="form-control" placeholder="Επιβεβαίωση κωδικού χρήστη" required>
+                        <div class="alert alert-danger" *ngIf="!password2.valid && password2.touched">Απαιτείται επιβεβαίωση κωδικού χρήστη.</div>
+                        <div class="alert alert-danger" *ngIf="(Password.value != password2.value) && password2.touched">Οι κωδικοί δεν ταιριάζουν.</div>
+                        <br>
+                        <button type="button" class="btn btn-danger float-right" (click)="editUser(4)">Ακύρωση</button>
+                        <button type="button" class="btn btn-primary float-right" (click)="setNewValue('password', Password, 4)">Ενημέρωση</button>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+</div><br>
+    <button class="btn btn-primary" style="position: relative; bottom: 20px;left: 20px;" type="Submit" [disabled]="!updateform.valid">Καταχώρηση</button>
+    <button class="btn btn-danger" style="position: relative; bottom: 20px;left: 20px;" type="button" (click)="cancel()">Ακύρωση</button>
 </form>
+</div>

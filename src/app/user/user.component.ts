@@ -11,7 +11,7 @@ export class UserComponent implements OnInit {
 
   private willChange: boolean[]=[];
   private willChangeCount: number
-  item = {"name":"John", "surname":"fgdfgDoe", "email":"ljklDoe","password":"rterDoe","password2":"qweDoe"}
+  item = {"name":"John", "surname":"fgdfgDoe", "username":"fgdadsasdasdadsae", "email":"ljklDoe","password":"rterDoe"}
 
   constructor(
     private router: ActivatedRoute,
@@ -21,14 +21,14 @@ export class UserComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.willChangeCount = 5;
+    this.willChangeCount = 4;
     for(var i=0;i<this.willChangeCount;i++)
       this.willChange[i] = false;
   }
 
   editUser(index)
   {
-    this.willChange[index] = true;
+    this.willChange[index] = !this.willChange[index];
   }
 
   setNewValue(field, newValue, index)

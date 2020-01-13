@@ -12,7 +12,29 @@
     /* right: 12%; */
     margin: auto;
     width: 65%;
+    height: auto;
     /* left: 25%; */
     top: 75px;
-    border-radius: 25px;
+    /* border-radius: 25px; */
+}
+
+.table, th, td{
+    border: 1px solid black;
+    width: auto;
+}
+
+tr{
+    border: 1px solid rgb(175, 34, 34);
+    width: auto;
+}
+
+.epilogiPerioxis{
+    position: relative;
+    top: 10%;
+    left: 2.5%;
+}
+
+.pinakas{
+    position: relative;
+    width: 100%;
 }
