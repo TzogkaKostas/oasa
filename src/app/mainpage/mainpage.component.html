@@ -22,12 +22,23 @@
             <br>
             <div class="form-group mx-sm-3 mb-2">
               <label for="inputPassword2" class="sr-only">From</label>
-              <input ngModel name="afetiria" #afetiria="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Αφετηρία" required>
+              <!-- <mat-form-field>
+                <input ngModel name="afetiria" #afetiria="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Αφετηρία" required>
+              </mat-form-field>
+              <mat-autocomplete>
+                <mat-option *ngFor="let option of options" [value]="option">
+                  {{ option }}
+                </mat-option> -->
+              <!-- </mat-autocomplete> -->
+              <input ngModel name="afetiria" #afetiria="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Αφετηρία" [ngbTypeahead]="search" required>
+                
+              <!-- <input ngModel #afetiria="ngModel" id="typeahead-basic" type="text" class="form-control" [ngbTypeahead]="search"/> -->
+
             </div>
             <br>
             <div class="form-group mx-sm-3 mb-2">
               <label for="inputPassword2" class="sr-only">To</label>
-              <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Προορισμός" required>
+              <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Προορισμός" [ngbTypeahead]="search" required>
             </div>
             <!-- <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2"> -->
             <input ngModel #amea="ngModel" type="radio" name="ameaa" value="amea" (click)="AmeA()"><h5 style="color: white;">ΑμεΑ</h5>

@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import {debounceTime, distinctUntilChanged, filter, map} from 'rxjs/operators';
+import { NgbTypeahead } from '@ng-bootstrap/ng-bootstrap';
+import { Subject, Observable, merge } from 'rxjs';
 
 @Component({
   selector: 'mainpage',
@@ -12,6 +15,17 @@ export class MainpageComponent implements OnInit {
   amea = false;
   from: string;
   to: string;
+  options = ['Βούλα', 'Γλυφάδα', 'Βουλιαγμένη', 'Περιστέρι', 'Εξάρχεια', 'Μαρούσι', 'Ζωγράφου', 'Καισαριανή']
+
+  public model: any;
+
+  search = (text$: Observable<string>) =>
+    text$.pipe(
+      debounceTime(200),
+      distinctUntilChanged(),
+      map(term => term.length < 2 ? []
+        : this.options.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
+    )
 
   constructor(
     private router: Router

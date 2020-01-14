@@ -15,6 +15,7 @@ import { SignupComponent } from './signup/signup.component';
 import { UserComponent } from './user/user.component';
 import { SuccessSubmitComponent } from './success-submit/success-submit.component';
 import { AgoraEisitirwnComponent } from './agora-eisitirwn/agora-eisitirwn.component';
+import { ShmeiaEkdosisOdikesComponent } from './shmeia-ekdosis-odikes/shmeia-ekdosis-odikes.component';
 
 const routes: Routes = [
   { path: '', component: MainpageComponent },
@@ -31,7 +32,8 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'user', component: UserComponent},
   { path: 'agora', component: AgoraEisitirwnComponent },
-  { path: 'success_submit', component: SuccessSubmitComponent }
+  { path: 'success_submit', component: SuccessSubmitComponent },
+  { path: 'shmeia-ekdosis/:id', component: ShmeiaEkdosisOdikesComponent }
 ];
 
 @NgModule({

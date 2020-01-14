@@ -20,7 +20,7 @@
 <div class="center">
     <div class="col epilogiPerioxis">
         <div ngbDropdown class="d-inline-block">
-            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Επιλέξτε Περιοχή</button>
+            <button class="btn btn-outline-primary dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>Επιλέξτε Περιοχή</button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                 <div *ngFor="let perioxi of diadromes">
                     <button ngbDropdownItem (click)="show(perioxi)">{{ perioxi[0] }}</button>

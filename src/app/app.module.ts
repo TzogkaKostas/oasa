@@ -25,6 +25,7 @@ import { UserComponent } from './user/user.component';
 import { AgoraEisitirwnComponent } from './agora-eisitirwn/agora-eisitirwn.component';
 import { SuccessSubmitComponent } from './success-submit/success-submit.component';
 import { FortisiKartasComponent } from './fortisi-kartas/fortisi-kartas.component';
+import { ShmeiaEkdosisOdikesComponent } from './shmeia-ekdosis-odikes/shmeia-ekdosis-odikes.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { FortisiKartasComponent } from './fortisi-kartas/fortisi-kartas.componen
     UserComponent,
     AgoraEisitirwnComponent,
     SuccessSubmitComponent,
-    FortisiKartasComponent
+    FortisiKartasComponent,
+    ShmeiaEkdosisOdikesComponent
   ],
   imports: [
     BrowserModule,
