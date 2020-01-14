@@ -14,6 +14,13 @@ export class FormaParapononComponent implements OnInit {
 	time = {hour: 0, minute: 0};
 	minDate;
 	maxDate;
+
+	first_name: any;
+	last_name: any;
+	email: any;
+	meso : any;
+	direction: any;
+
 	constructor(private router: Router) {
 		this.minDate = {year: 2010, month: 1, day: 1};
 		let curDate = new Date();

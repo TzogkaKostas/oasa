@@ -1,3 +1,8 @@
+.lgg{
+
+    width: 10px;
+}
+
 .form-label-left{
     width:150px;
 }
@@ -13,15 +18,6 @@ body, html{
     padding:0;
     background:#fff;
 }
-
-button:disabled {
-    color: #a94442;
-}
-
-button:enabled {
-    color: #42A948;
-}
-
 
 .form-all{
     margin:0px auto;

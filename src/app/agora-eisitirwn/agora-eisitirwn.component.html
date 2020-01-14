@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<form #myForm="ngForm" (ngSubmit)="onSubmit()"a class="jotform-form" action="https://pci.jotform.com/submit/200066604350342" method="post" name="myform" id="200066604350342" accept-charset="utf-8">
+<form #myForm="ngForm" (ngSubmit)="onSubmit()" a class="jotform-form" action="https://pci.jotform.com/submit/200066604350342" method="post" name="myform" id="200066604350342" accept-charset="utf-8">
   <input type="hidden" name="formID" value="200066604350342" />
   <input type="hidden" id="JWTContainer" value="" />
   <input type="hidden" id="cardinalOrderNumber" value="" />
@@ -225,11 +225,11 @@
                   <td width="50%">
                     <span class="form-sub-label-container " style="vertical-align:top">
                       <label class="form-sub-label" for="input_3_cc_firstName" id="sublabel_cc_firstName" style="min-height:13px;margin:0 0 3px 0"> Όνομα </label>
-                      <input #first_name="ngModel" required [(ngModel)]="first_name_var" type="text" id="first_name" name="first_name" class="form-control" size="20" value="" data-component="cc_firstName" />
+                      <input #first_name_model="ngModel" required [(ngModel)]="first_name" type="text" id="first_name_id" name="first_name_id" class="form-control" size="20" value="" />
 
-                      <div *ngIf="first_name.invalid && (first_name.dirty || first_name.touched)"
+                      <div *ngIf="first_name_model.invalid && (first_name_model.dirty || first_name_model.touched)"
                         class="alert alert-danger">
-                        <div *ngIf="first_name.errors.required">Name is required.</div>
+                        <div *ngIf="first_name_model.errors.required">Απαιτείται το Όνομα.</div>
                       </div>
                       
                     </span>
@@ -237,7 +237,12 @@
                   <td width="50%">
                     <span class="form-sub-label-container " style="vertical-align:top">
                       <label class="form-sub-label" for="input_3_cc_lastName" id="sublabel_cc_lastName" style="min-height:13px;margin:0 0 3px 0"> Επίθετο </label>
-                      <input required [(ngModel)]="last_name" type="text" id="last_name" name="last_name" class="form-textbox cc_lastName" size="20" value="" data-component="cc_lastName" />
+                      <input #last_name_model="ngModel" required [(ngModel)]="last_name" type="text" id="last_name_id" name="last_name_id" class="form-control" size="20" value="" />
+
+                      <div *ngIf="last_name_model.invalid && (last_name_model.dirty || last_name_model.touched)"
+                      class="alert alert-danger">
+                      <div *ngIf="last_name_model.errors.required">Απαιτείται το Επίθετο</div> 
+                    </div>
                     </span>
                   </td>
                 </tr>
@@ -245,13 +250,23 @@
                   <td width="50%">
                     <span class="form-sub-label-container " style="vertical-align:top">
                       <label class="form-sub-label" for="input_3_cc_number" id="sublabel_cc_number" style="min-height:13px;margin:0 0 3px 0"> Αριθμός Πιστωτικής Κάρτας </label>
-                      <input required [(ngModel)]="credit_card_number" type="number" id="credit_card_number" name="credit_card_number" class="form-textbox cc_number" autoComplete="off" size="20" value="" data-component="cc_number" />
+                      <input #credit_card_number_model="ngModel" required [(ngModel)]="credit_card_number" type="text" id="credit_card_number_id" name="credit_card_number_id" class="form-control" size="20" value="" />
+
+                      <div *ngIf="credit_card_number_model.invalid && (credit_card_number_model.dirty || credit_card_number_model.touched)"
+                      class="alert alert-danger">
+                      <div *ngIf="credit_card_number_model.errors.required">Απαιτείται ο Αριθμός Πιστωτικής Κάρτας.</div> 
+                    </div>
                     </span>
                   </td>
                   <td width="50%">
                     <span class="form-sub-label-container " style="vertical-align:top">
                       <label class="form-sub-label" for="input_3_cc_ccv" id="sublabel_cc_ccv" style="min-height:13px;margin:0 0 3px 0"> Κωδικός Ασφαλείας </label>
-                      <input required [(ngModel)]="security_code" type="number" id="security_code" name="security_code" class="form-textbox cc_ccv" autoComplete="off" style="width:52px" value="" data-component="cc_ccv" />
+                      <input #security_code_model="ngModel" required [(ngModel)]="security_code" type="text" id="security_code_id" name="security_code_id" class="form-control" size="20" value="" />
+
+                      <div *ngIf="security_code_model.invalid && (security_code_model.dirty || security_code_model.touched)"
+                      class="alert alert-danger">
+                      <div *ngIf="security_code_model.errors.required">Απαιτείται ο Κωδικός Ασφαλείας.</div> 
+                    </div>
                     </span>
                   </td>
                 </tr>
@@ -308,8 +323,13 @@
                 </tr>
                 <td width="50%">
                   <span class="form-sub-label-container " style="vertical-align:top">
-                    <label class="form-sub-label" for="input_3_cc_number" id="sublabel_cc_number" style="min-height:13px;margin:0 0 3px 0"> Αριθμός Πιστωτικής Κάρτας </label>
-                    <input required [(ngModel)]="athena_number" type="number" id="athena_number" name="athena_number" class="form-textbox cc_number" autoComplete="off" size="20" value="" data-component="cc_number" />
+                    <label class="form-sub-label" for="input_3_cc_number" id="sublabel_cc_number" style="min-height:13px;margin:0 0 3px 0"> Αριθμός Athena Κάρτας </label>
+                    <input #athena_number_model="ngModel" required [(ngModel)]="athena_number" type="text" id="athena_number_id" name="athena_number_id" class="form-control" size="20" value="" />
+
+                    <div *ngIf="athena_number_model.invalid && (athena_number_model.dirty || athena_number_model.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="athena_number_model.errors.required">Απαιτείται ο Κωδικός Ασφαλείας.</div> 
+                </div>
                   </span>
                 </td>
               </tbody>
@@ -324,7 +344,13 @@
                 </tr>
                   <td width="50%">
                     <span class="form-sub-label-container " style="vertical-align:top">
-                      <input required [(ngModel)]="email" type="text" id="email" required name="email" class="form-textbox cc_firstName" size="20" value="" data-component="cc_firstName" />
+                    <input #email_model="ngModel" required [(ngModel)]="athena_number" type="text" id="email_model_id" name="email_model_id" class="form-control" size="20" value="" />
+
+                    <div *ngIf="email_model.invalid && (email_model.dirty || email_model.touched)"
+                    class="alert alert-danger">
+                      <div *ngIf="email_model.errors.required">Απαιτείται το Email.</div> 
+                    </div>
+
                     </span>
                   </td>
               </tbody>
@@ -338,7 +364,7 @@
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="margin-left:156px" class="form-buttons-wrapper ">
-            <button class="submitbutton" [ngClass] = "{'submitbutton': isDisabled}" [disabled]="!myForm.form.valid" id="input_2" type="submit" class="form-submit-button" data-component="button" data-content="">
+            <button class="btn btn-lg btn-primary btn-block" [disabled]="!myForm.valid || this.total_sum == 0" id="input_2" type="submit" style="width:120px;height:50px;">
               Υποβολή
             </button>
           </div>

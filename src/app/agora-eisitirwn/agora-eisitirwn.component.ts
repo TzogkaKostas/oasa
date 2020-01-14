@@ -13,7 +13,7 @@ export class AgoraEisitirwnComponent implements OnInit {
   myarray: any[][] = [[0, 1], [0, 1], [0, 1], [0, 1], [0, 1]];
   ticket_costs = [1.40, 0.70, 4.50, 9.00, 6.00];
   total_sum: any;
-  first_name_var: any;
+  first_name: any;
   last_name: any;
   credit_card_number: any;
   security_code: any;
