@@ -28,7 +28,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let stoixio of to_show; let i = index">
+                    <tr *ngFor="let stoixio of to_show; let i = index" routerLink="">
                         <th scope="row">{{ i+1 }}</th>
                         <td>{{ stoixio[0] }}</td>
                         <td>{{ stoixio[1] }}</td>

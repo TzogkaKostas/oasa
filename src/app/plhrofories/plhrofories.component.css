@@ -30,6 +30,11 @@ tr{
     width: auto;
 }
 
+tr:hover{
+    cursor: pointer;
+    background-color: rgb(209, 209, 209);
+}
+
 /* .epilogiPerioxis{
     margin-top: auto;
     width: 90%;
