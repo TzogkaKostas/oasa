@@ -38,19 +38,25 @@ export class HttpService {
     //   });
     // console.log('PIRA STO SIGN IN: ');
     console.log(userInfo);
+    console.log(this.url + 'get_user.php/?username=' + userInfo.username + '&password=' + userInfo.password);
     // return
-    return this.http.get(this.url + 'get_user.php', userInfo)
+    // let params = { }
+    // params['username'] = userInfo.username;
+    // params['password'] = userInfo.password;
+    return this.http.get(this.url + 'get_user.php/?username=' + userInfo.username + '&password=' + userInfo.password)
     .map(response => {
-      let user = response;
-      console.log("Logged in: ", user);
+      let user = response.json();
+      console.log("Logged in JSON: ", user);
+      // console.log("Logged in: ", response);
       if(user){
         // if (user['state'] == 'ACCEPTED' && user['response'] == 'OK') {
         //   localStorage.setItem('token', JSON.stringify(user)); 
         //   localStorage.setItem('username', userInfo.username);           
         //   return true;
         // }  
-        return false;
+        return user;
       }
+      return false;
     });
   }
 

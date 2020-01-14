@@ -20,10 +20,12 @@ export class LoginComponent implements OnInit {
   }
 
   signIn(credentials){
-    console.log(credentials);
+    if(credentials.username == "" || credentials.password == "")return;
+    // console.log("lalalaal"+credentials);
     this.invalidLogin = false;
     this.httpServ.login(credentials)
       .subscribe(result => { 
+        console.log("RES: ");
         console.log(result);
       }, error =>{
         //alert('Invalid login');
@@ -31,7 +33,7 @@ export class LoginComponent implements OnInit {
           this.invalidLogin = true;
         }
         else{
-          alert('Something Went Wrong!');
+          alert('Something Went Wrong!' + " errostatus." + error.status);
         }
       });
   }
