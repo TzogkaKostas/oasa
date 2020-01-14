@@ -10,7 +10,9 @@ import 'rxjs/add/operator/map'
 })
 export class HttpService {
 
-  url= 'http://f78fafea.ngrok.io/angular_app/';
+  //url= 'http://f78fafea.ngrok.io/angular_app/';
+  url= 'http://localhost/angular_app/';
+
 
   constructor(
     // private httpC: HttpClient,
