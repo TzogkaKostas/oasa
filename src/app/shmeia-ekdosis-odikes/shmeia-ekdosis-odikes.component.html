@@ -1,21 +1,3 @@
-<!-- <br>
-<div class="center">
-    <p>shmeia-ekdosis-odikes works!</p>
-    <table>
-        <tr>
-          <th>Month</th>
-          <th>Savings</th>
-        </tr>
-        <tr>
-          <td>January</td>
-          <td>$100</td>
-        </tr>
-        <tr>
-          <td>February</td>
-          <td>$80</td>
-        </tr>
-      </table>
-</div> -->
 <br>
 <div class="center">
     <div class="col epilogiPerioxis">
@@ -34,39 +16,18 @@
             <thead>
               <tr>
                 <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Είδος</th>
+                <th scope="col">Διεύθυνση</th>
+                <th scope="col">Ώρες Λειτουργίας</th>
               </tr>
             </thead>
             <tbody>
-              <!-- <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr> -->
-
-              <!-- <div *ngFor="let stoixio of to_show; let i = index"> -->
                 <tr *ngFor="let stoixio of to_show; let i = index">
                     <th scope="row">{{ i+1 }}</th>
                     <td>{{ stoixio[0] }}</td>
                     <td>{{ stoixio[1] }}</td>
                     <td>{{ stoixio[2] }}</td>
                 </tr>
-              <!-- </div> -->
             </tbody>
           </table>
     </div>

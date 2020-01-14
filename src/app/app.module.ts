@@ -28,6 +28,7 @@ import { FortisiKartasComponent } from './fortisi-kartas/fortisi-kartas.componen
 import { ShmeiaEkdosisOdikesComponent } from './shmeia-ekdosis-odikes/shmeia-ekdosis-odikes.component';
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { PlhroforiesComponent } from './plhrofories/plhrofories.component';
+import { HttpModule } from '@angular/http';
 
 
 
@@ -61,7 +62,8 @@ import { PlhroforiesComponent } from './plhrofories/plhrofories.component';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    GooglePlaceModule
+    GooglePlaceModule,
+    HttpModule
   ],
   providers: [
     HttpService

@@ -1,0 +1,80 @@
+.center{
+    /* border-color: rgb(165, 165, 165);
+    border-width: 4px;
+    border-style: solid; */
+
+    background-color: rgb(255, 255, 255);;
+
+    /* display: flex; */
+    justify-content: center;
+
+    position: relative;
+    /* right: 12%; */
+    margin: auto;
+    width: 65%;
+    height: auto;
+    /* left: 25%; */
+    top: 75px;
+    /* border-radius: 25px; */
+    border-radius: 25px;
+}
+
+
+.table, th, td{
+    /* border: 1px solid black; */
+    width: auto;
+}
+
+tr{
+    /* border: 1px solid rgb(175, 34, 34); */
+    width: auto;
+}
+
+/* .epilogiPerioxis{
+    margin-top: auto;
+    width: 90%;
+    margin-left: 30%;
+    margin-right: 30%
+} */
+
+h2 {
+    margin: 0;
+    display: inline-block;
+    margin-right: 10%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+
+    }
+
+.h2s {
+    margin: 0;
+    display: inline-block;
+    margin-right: 11%;
+    margin-bottom: 2%;
+    margin-top: 1%;
+
+    }
+
+.pinakas{
+    position: relative;
+    width: 100%;
+}
+
+.metro{
+
+    background-color: rgb(255, 255, 255);;
+
+    /* display: flex; */
+    justify-content: center;
+
+    position: relative;
+    /* right: 12%; */
+    margin: auto;
+    width: 65%;
+    height: auto;
+    /* left: 25%; */
+    top: 75px;
+    /* border-radius: 25px; */
+    border-radius: 25px;
+}
+

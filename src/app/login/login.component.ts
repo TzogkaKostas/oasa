@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../services/http.service';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,39 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private httpServ: HttpService,
+    private router: Router
+  ) { }
+
+  invalidLogin: boolean;
 
   ngOnInit() {
   }
 
   signIn(credentials){
-    // console.log(credentials);
-    // this.invalidLogin = false;
-    // this.authService.login(credentials)
-    //   .subscribe(result => { 
-    //     console.log('result ' + result);
-    //     if (result){
-    //       let something = this.authService.currentUser();
-    //       console.log(something);
-    //     let returnUrl = this.rout.snapshot.queryParamMap.get('returnUrl');
-    //       if(this.authService.currentUser().admin_flag){
-    //         this.router.navigate(['/admin']);
-    //       }
-    //       else{
-    //         this.router.navigate([returnUrl || '/main-page']);
-    //       }
-    //     }
-    //     else  
-    //       this.invalidLogin = true;
-    //   }, error =>{
-    //     //alert('Invalid login');
-    //     if(error.status === 401){
-    //       this.invalidLogin = true;
-    //     }
-    //     else{
-    //       alert('Something Went Wrong!');
-    //     }
-    //   });
+    console.log(credentials);
+    this.invalidLogin = false;
+    this.httpServ.login(credentials)
+      .subscribe(result => { 
+        console.log(result);
+      }, error =>{
+        //alert('Invalid login');
+        if(error.status === 404){
+          this.invalidLogin = true;
+        }
+        else{
+          alert('Something Went Wrong!');
+        }
+      });
   }
 
 }

@@ -1,1 +1,83 @@
-<p>plhrofories works!</p>
+<!-- <p>plhrofories works!</p> -->
+
+<br>
+<div *ngIf="odikes" >
+    <div class="center">
+        <div class="epilogiPerioxis">
+            <h2 style="padding: 20px;">Επιλογή Λεοφωρείου ανα Περιοχή:</h2>
+            <div ngbDropdown class="d-inline-block">
+                <!-- <button class="btn btn-outline-primary dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>Επιλέξτε Περιοχή</button> -->
+                <button class="btn btn-secondary btn-lg" type="button" ngbDropdownToggle  id="dropdownBasic1" >
+                    Επιλέξτε Περιοχή
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <div *ngFor="let perioxi of diadromes">
+                        <button ngbDropdownItem (click)="show(perioxi)">{{ perioxi[0] }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <br> -->
+        <div *ngIf="to_show.length != 0">
+            <table class="table pinakas">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Γραμμή</th>
+                    <th scope="col">Διαδρομή</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let stoixio of to_show; let i = index">
+                        <th scope="row">{{ i+1 }}</th>
+                        <td>{{ stoixio[0] }}</td>
+                        <td>{{ stoixio[1] }}</td>
+                        <td>{{ stoixio[2] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>  
+    <br>
+    <div class="center">
+        <div class="epilogiPerioxis">
+            <h2 class="h2s" style="padding: 20px;">Επιλογή Λεοφωρείου ανα Γραμμή:</h2>
+            <div ngbDropdown class="d-inline-block">
+                <!-- <button class="btn btn-outline-primary dropdown-toggle" id="dropdownBasic1" ngbDropdownToggle>Επιλέξτε Περιοχή</button> -->
+                <button class="btn btn-secondary btn-lg" type="button" ngbDropdownToggle  id="dropdownBasic2" >
+                    Επιλέξτε Γραμμή
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                    <div *ngFor="let perioxi of grammes">
+                        <button ngbDropdownItem (click)="show1(perioxi)">{{ perioxi[0] }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <br> -->
+        <div *ngIf="to_show1.length != 0">
+            <table class="table pinakas">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Γραμμή</th>
+                    <th scope="col">Διαδρομή</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let stoixio of to_show1; let j = index">
+                        <th scope="row">{{ j+1 }}</th>
+                        <td>{{ stoixio[0] }}</td>
+                        <td>{{ stoixio[1] }}</td>
+                        <td>{{ stoixio[2] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+</div>
+
+<div *ngIf="sta8eres" class="metro">
+    <h2 class="h2s" style="padding: 20px;">Χάρτης Σταθερών Συγκοινωνιών</h2>
+    <img src="/assets/xarths_metro.png" class="mainpagePic">
+</div>
