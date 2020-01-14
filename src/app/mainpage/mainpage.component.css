@@ -135,8 +135,8 @@
 }
 
 .whereTo{
-    /* border-color: rgb(255, 255, 255);
-    border-width: 2px;
+    /* border-color: rgb(36, 248, 36); */
+    /* border-width: 2px;
     border-style: solid; */
 
     position: relative;
@@ -158,16 +158,20 @@
 }
 
 .submitrout{
-  display: flex;
-  position: relative;
-  justify-content: center;
-  margin: auto;
-  top: 30px;
-  /* left: 25%; */
+  /* border-color: rgb(0, 0, 0);
+    border-width: 2px;
+    border-style: solid; */
+  /* display: flex; */
+  position: absolute;
+  /* justify-content: center; */
+  /* margin: auto; */
+  /* right: 0%; */
+  bottom: 0%;
+  left: 15px;
 }
 
 .anakoinoseis{
-    /* border-color: rgb(255, 255, 255);
+    /* border-color: rgb(0, 0, 0);
     border-width: 2px;
     border-style: solid; */
 

@@ -16,15 +16,16 @@ export class MainpageComponent implements OnInit {
   from: string;
   to: string;
   options = ['Βούλα', 'Γλυφάδα', 'Βουλιαγμένη', 'Περιστέρι', 'Εξάρχεια', 'Μαρούσι', 'Ζωγράφου', 'Καισαριανή']
-
+  diefth = false;
   public model: any;
 
   search = (text$: Observable<string>) =>
     text$.pipe(
       debounceTime(200),
       distinctUntilChanged(),
-      map(term => term.length < 2 ? []
-        : this.options.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10))
+      map(term => term.length < 1 ? []
+        : this.options.filter(v => v.toLowerCase().indexOf(term.toLowerCase()) > -1).slice(0, 10)
+        )
     )
 
   constructor(

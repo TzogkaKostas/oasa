@@ -4,4 +4,5 @@ body {
     margin: auto;
     width: 65%;
     top: 75px;
+    border-radius: 25px;
 }

@@ -18,9 +18,16 @@
         <div class="wtClass">
             Προς τα Που?
         </div>
-        <form class="form-inline" style="position: relative; top: 10%; right: 5%;" #form="ngForm">
-            <br>
-            <div class="form-group mx-sm-3 mb-2">
+        <form class="form-inline" style="
+
+        position: relative;
+        top: 0%;
+        height: 90%;
+        right: 0%;" #form="ngForm">
+            <!-- <br> -->
+            <div class="form-group mx-sm-3 mb-2" style="position: absolute;
+            top: 5px;
+            left: 0px;">
               <label for="inputPassword2" class="sr-only">From</label>
               <!-- <mat-form-field>
                 <input ngModel name="afetiria" #afetiria="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Αφετηρία" required>
@@ -36,12 +43,23 @@
 
             </div>
             <br>
-            <div class="form-group mx-sm-3 mb-2">
+            <div class="form-group mx-sm-3 mb-2" style="position: absolute;
+            top: 60px;
+            left: 0px;">
               <label for="inputPassword2" class="sr-only">To</label>
               <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Προορισμός" [ngbTypeahead]="search" required>
             </div>
             <!-- <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2"> -->
-            <input ngModel #amea="ngModel" type="radio" name="ameaa" value="amea" (click)="AmeA()"><h5 style="color: white;">ΑμεΑ</h5>
+            <!-- <input ngModel #amea="ngModel" type="radio" name="ameaa" value="amea" (click)="AmeA()"><h5 style="color: white;">ΑμεΑ</h5> -->
+            
+            <input *ngIf="afetiria.value != ''" size="13" ngModel name="diafthinsi" #diefthinsi="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Διεύθυνση Αφετηρίας" style="position: absolute;
+            top: 120px;
+            left: 15px;">
+          
+            <input *ngIf="proorismos.value != ''" size="13" ngModel name="diafthinsi" #diefthinsi="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Διεύθυνση Προορισμού" style="position: absolute;
+            top: 120px;
+            right: 15px;">
+            
             <!-- <input type="radio" value="AMEA" formControlName="SPECIAL NEED"><span>ΑμεΑ</span> -->
             <br><br>
             <button type="submit" class="btn btn-primary mb-2 submitrout" (click)="findRout(afetiria, proorismos)">Εύρεση Διαδρομής</button>
@@ -83,9 +101,7 @@
       <span class="d-block p-2 bg-secondary text-white">6. Πηγαίνετε σε στάση ΣΥΝΤΑΓΜΑ Bus και πάρτε το λεωφορείο 224 προς ΕΛ. ΒΕΝΙΖΕΛΟΥ - ΚΑΙΣΑΡΙΑΝΗ. Ακολουθήστε τη διαδρομή για 11 στάσεις.</span>
       <div class="card">
         <div class="card-body">
-          Συνολικός χρόνος: 111 λεπτά
-          <br>
-          Συνολική απόσταση: 22466 μέτρα
+          Προβλεπόμενος χρόνος: 47 λεπτά
         </div>
       </div>
     </div>

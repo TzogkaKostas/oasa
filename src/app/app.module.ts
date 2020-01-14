@@ -26,6 +26,9 @@ import { AgoraEisitirwnComponent } from './agora-eisitirwn/agora-eisitirwn.compo
 import { SuccessSubmitComponent } from './success-submit/success-submit.component';
 import { FortisiKartasComponent } from './fortisi-kartas/fortisi-kartas.component';
 import { ShmeiaEkdosisOdikesComponent } from './shmeia-ekdosis-odikes/shmeia-ekdosis-odikes.component';
+import { GooglePlaceModule } from "ngx-google-places-autocomplete";
+import { PlhroforiesComponent } from './plhrofories/plhrofories.component';
+
 
 
 @NgModule({
@@ -48,7 +51,8 @@ import { ShmeiaEkdosisOdikesComponent } from './shmeia-ekdosis-odikes/shmeia-ekd
     AgoraEisitirwnComponent,
     SuccessSubmitComponent,
     FortisiKartasComponent,
-    ShmeiaEkdosisOdikesComponent
+    ShmeiaEkdosisOdikesComponent,
+    PlhroforiesComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +60,8 @@ import { ShmeiaEkdosisOdikesComponent } from './shmeia-ekdosis-odikes/shmeia-ekd
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    GooglePlaceModule
   ],
   providers: [
     HttpService
