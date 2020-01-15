@@ -228,8 +228,8 @@
                       <input #first_name_model="ngModel" required [(ngModel)]="first_name" type="text" id="first_name_id" name="first_name_id" class="form-control" size="20" value="" />
 
                       <div *ngIf="first_name_model.invalid && (first_name_model.dirty || first_name_model.touched)"
-                        class="alert alert-danger">
-                        <div *ngIf="first_name_model.errors.required">Απαιτείται το Όνομα.</div>
+                        class="alert alert-danger">Απαιτείται το Όνομα.
+                        <!-- <div *ngIf="first_name_model.errors.required">Απαιτείται το Όνομα.</div> -->
                       </div>
                       
                     </span>
@@ -276,18 +276,18 @@
                       <label class="form-sub-label" for="input_3_cc_exp_month" id="sublabel_cc_exp_month" style="min-height:13px;margin:0 0 3px 0"> Ημερομηνία Λήξης  </label>
                       <select required [(ngModel)]="expiration_month" class="form-dropdown cc_exp_month" name="expiration_month" id="expiration_month" data-component="cc_exp_month">
                         <option>  </option>
-                        <option value="January"> January </option>
-                        <option value="February"> February </option>
-                        <option value="March"> March </option>
-                        <option value="April"> April </option>
-                        <option value="May"> May </option>
-                        <option value="June"> June </option>
-                        <option value="July"> July </option>
-                        <option value="August"> August </option>
-                        <option value="September"> September </option>
-                        <option value="October"> October </option>
-                        <option value="November"> November </option>
-                        <option value="December"> December </option>
+                        <option value="January"> Ιανουάριος </option>
+                        <option value="February"> Φεβρουάριος </option>
+                        <option value="March"> Μάρτιος </option>
+                        <option value="April"> Απρίλιος </option>
+                        <option value="May"> Μάιος </option>
+                        <option value="June"> Ιούνιος </option>
+                        <option value="July"> Ιούλιος </option>
+                        <option value="August"> Αύγουστος </option>
+                        <option value="September"> Σεπτέμβριος </option>
+                        <option value="October"> Οκτώβριος </option>
+                        <option value="November"> Νοέμβριος </option>
+                        <option value="December"> Δεκέμβριος </option>
                       </select>
                     </span>
                   </td>
@@ -344,7 +344,7 @@
                 </tr>
                   <td width="50%">
                     <span class="form-sub-label-container " style="vertical-align:top">
-                    <input #email_model="ngModel" required [(ngModel)]="athena_number" type="text" id="email_model_id" name="email_model_id" class="form-control" size="20" value="" />
+                    <input #email_model="ngModel" required [(ngModel)]="email" type="text" id="email_model_id" name="email_model_id" class="form-control" size="20" value="" />
 
                     <div *ngIf="email_model.invalid && (email_model.dirty || email_model.touched)"
                     class="alert alert-danger">

@@ -17,7 +17,7 @@
 				<label class="form-label form-label-left form-label-auto"
 					id="label_3_5" for="input_3_5"> Ημερομηνία Συμβάντος: </label>
 				<div class="input-group">
-					<input class="form-control" placeholder="dd-mm-yyyy" [minDate]="minDate"
+					<input class="form-control" placeholder="yyyy-mm-dd" [minDate]="minDate"
 						[maxDate]="maxDate"
 						name="dp" [(ngModel)]="calendar_date" ngbDatepicker  #d="ngbDatepicker">
 
@@ -56,7 +56,7 @@
 						</optgroup>
 					</select>
 					<div *ngIf="meso_model.invalid && (meso_model.dirty || meso_model.touched)"
-							class="alert alert-danger">
+							class="alert-danger"> 
 						<div *ngIf="meso_model.errors.required">Απαιτείται η επιλογή ενός μέσου.</div>
 					</div>
 				</div>
@@ -81,6 +81,10 @@
 						<option value="1">Σημεία έλλειψης εισιτηρίων</option>
 						<option value="2">Στάσεις-στέγαστρα</option>
 					</select>
+					<div *ngIf="thematiki_model.invalid && (thematiki_model.dirty || thematiki_model.touched)"
+							class="alert-danger"> 
+						<div *ngIf="thematiki_model.errors.required">Απαιτείται η επιλογή μίας θεματικής ενότητας.</div>
+					</div>
 				</div>
 			</li>
 
@@ -103,7 +107,7 @@
 					 <input #first_name_model="ngModel" required [(ngModel)]="first_name" type="text" id="input1" name="first_name_id"
 					 type="text" class="form-textbox" />
 					<div *ngIf="first_name_model.invalid && (first_name_model.dirty || first_name_model.touched)"
-							class="alert alert-danger">
+							class="alert-danger">
 						<div *ngIf="first_name_model.errors.required">Απαιτείται το Όνομα.</div>
 					</div>
 
@@ -111,7 +115,7 @@
 					data-type="input-textbox" class="form-textbox" size="20" value=""
 					placeholder=" " data-component="textbox" aria-labelledby="label_4" />
 					<div *ngIf="last_name_model.invalid && (last_name_model.dirty || last_name_model.touched)"
-							class="alert alert-danger">
+							class="alert-danger">
 						<div *ngIf="last_name_model.errors.required">Απαιτείται το Επώνυμο.</div>
 					</div>
 
@@ -119,7 +123,7 @@
 					data-type="input-textbox" class="form-textbox" size="20" value=""
 					placeholder=" " data-component="textbox" aria-labelledby="label_4" />
 					<div *ngIf="email_model.invalid && (email_model.dirty || email_model.touched)"
-							class="alert alert-danger">
+							class="alert-danger">
 						<div *ngIf="email_model.errors.required">Απαιτείται το Email.</div>
 			  		</div>
 				</div>
@@ -134,7 +138,7 @@
 				</div>
 
 				<div ngbDropdown class="btn-group">
-					<input [(ngModel)]="first_name" type="text" id="input1" name="first_name_id"
+					<input type="text" id="input1" name="first_name_id"
 					data-type="input-textbox" class="form-textbox" size="20" value=""
 					placeholder=" " data-component="textbox" aria-labelledby="label_4" />
 					<input type="text" id="input2" name="q4_complainantsName"
@@ -175,7 +179,7 @@
 				for="input_7">Δήμος</label>
 			</div>
 
-			<div ngbDropdown class="btn-group">
+			<!-- <div ngbDropdown class="btn-group">
 				<input type="text" id="input1" name="q4_complainantsName"
 				data-type="input-textbox" class="form-textbox" size="20" value=""
 				placeholder=" " data-component="textbox" aria-labelledby="label_4" />
@@ -184,7 +188,7 @@
 			<div ngbDropdown class="btn-group">
 				<label class="form-label form-label-left form-label-auto " id="label1"
 				for="input_7">Ταχ. Κώδικας</label>
-			</div>
+			</div> -->
 
 			</li>
 

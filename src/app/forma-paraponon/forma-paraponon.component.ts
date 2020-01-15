@@ -24,7 +24,7 @@ export class FormaParapononComponent implements OnInit {
 	constructor(private router: Router) {
 		this.minDate = {year: 2010, month: 1, day: 1};
 		let curDate = new Date();
-		this.maxDate = {year:curDate.getFullYear(), month: curDate.getMonth() + 1, day: curDate.getUTCDate() + 1};		
+		this.maxDate = {year:curDate.getFullYear(), month: curDate.getMonth() + 1, day: curDate.getUTCDate()};		
   }
 
   ngOnInit() {
