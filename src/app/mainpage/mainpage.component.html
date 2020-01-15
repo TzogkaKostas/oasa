@@ -37,7 +37,7 @@
                   {{ option }}
                 </mat-option> -->
               <!-- </mat-autocomplete> -->
-              <input ngModel name="afetiria" #afetiria="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Αφετηρία" [ngbTypeahead]="search" required>
+              <input ngModel name="afetiria" size="16" #afetiria="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Αφετηρία" [ngbTypeahead]="search" required>
                 
               <!-- <input ngModel #afetiria="ngModel" id="typeahead-basic" type="text" class="form-control" [ngbTypeahead]="search"/> -->
 
@@ -47,7 +47,7 @@
             top: 60px;
             left: 0px;">
               <label for="inputPassword2" class="sr-only">To</label>
-              <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Προορισμός" [ngbTypeahead]="search" required>
+              <input ngModel name="proorismos" size="16" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2" placeholder="Προορισμός" [ngbTypeahead]="search" required>
             </div>
             <!-- <input ngModel name="proorismos" #proorismos="ngModel" type="name" class="form-control" id="inputPassword2"> -->
             <!-- <input ngModel #amea="ngModel" type="radio" name="ameaa" value="amea" (click)="AmeA()"><h5 style="color: white;">ΑμεΑ</h5> -->
@@ -60,7 +60,10 @@
             top: 120px;
             right: 15px;">
             
-            <!-- <input type="radio" value="AMEA" formControlName="SPECIAL NEED"><span>ΑμεΑ</span> -->
+            <div style="position: absolute;
+            top: 15px; left: 200px;">
+              <input type="radio" value="AMEA" formControlName="SPECIAL NEED"><span style="color: white;">ΑμεΑ</span>
+            </div>
             <br><br>
             <button type="submit" class="btn btn-primary mb-2 submitrout" (click)="findRout(afetiria, proorismos)">Εύρεση Διαδρομής</button>
           </form>

@@ -17,12 +17,13 @@ import { SuccessSubmitComponent } from './success-submit/success-submit.componen
 import { AgoraEisitirwnComponent } from './agora-eisitirwn/agora-eisitirwn.component';
 import { ShmeiaEkdosisOdikesComponent } from './shmeia-ekdosis-odikes/shmeia-ekdosis-odikes.component';
 import { PlhroforiesComponent } from './plhrofories/plhrofories.component';
+import { StaseisComponent } from './staseis/staseis.component';
 
 const routes: Routes = [
   { path: '', component: MainpageComponent },
   { path: 'amea', component: AmeaComponent },
   { path: 'sixneserotiseis', component: SixnesErotiseisComponent },
-  { path: 'times', component: TimesEisitirionComponent },
+  { path: 'times/:id', component: TimesEisitirionComponent },
   { path: 'erotimatologio', component: ErotimatologioComponent },
   { path: 'orario', component: OrarioLeitourgiasComponent },
   { path: 'parapona', component: FormaParapononComponent },
@@ -36,6 +37,8 @@ const routes: Routes = [
   { path: 'success_submit', component: SuccessSubmitComponent },
   { path: 'shmeia-ekdosis/:id', component: ShmeiaEkdosisOdikesComponent },
   { path: 'plhrofories/:id', component: PlhroforiesComponent },
+  { path: 'plhrofories/:id/:id2', component: PlhroforiesComponent },
+  { path: 'staseis/:id', component: StaseisComponent }
 ];
 
 @NgModule({

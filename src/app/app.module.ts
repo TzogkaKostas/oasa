@@ -29,6 +29,7 @@ import { ShmeiaEkdosisOdikesComponent } from './shmeia-ekdosis-odikes/shmeia-ekd
 import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { PlhroforiesComponent } from './plhrofories/plhrofories.component';
 import { HttpModule } from '@angular/http';
+import { StaseisComponent } from './staseis/staseis.component';
 
 
 
@@ -53,7 +54,8 @@ import { HttpModule } from '@angular/http';
     SuccessSubmitComponent,
     FortisiKartasComponent,
     ShmeiaEkdosisOdikesComponent,
-    PlhroforiesComponent
+    PlhroforiesComponent,
+    StaseisComponent
   ],
   imports: [
     BrowserModule,

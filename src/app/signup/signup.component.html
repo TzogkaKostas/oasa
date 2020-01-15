@@ -11,9 +11,9 @@
   
     <div class="alert alert-danger" *ngIf="invalidSignUp">Το όνομα χρήστη ή ο κωδικός πρόσβασης. </div>
   
-    <!-- <label for="inputUName" class="sr-only">First Name</label>
-    <input type="name" id="inputUName" name="user_id" ngModel #UserName="ngModel" class="form-control" placeholder="Username" pattern="^[a-zA-Z0-9]*" required autofocus>
-    <div class="alert alert-danger" *ngIf="!UserName.valid && UserName.touched">Username is required.</div> -->
+    <label for="inputUName" class="sr-only">First Name</label>
+    <input type="name" id="inputUName" name="username" ngModel #UserName="ngModel" class="form-control" placeholder="Username" pattern="^[a-zA-Z0-9]*" required autofocus>
+    <div class="alert alert-danger" *ngIf="!UserName.valid && UserName.touched">Username is required.</div>
   
     <label for="inputName" class="sr-only">Όνομα</label>
     <input type="name" id="inputName" name="name" ngModel #firstName="ngModel" class="form-control" placeholder="Όνομα" required autofocus>

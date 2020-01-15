@@ -28,7 +28,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let stoixio of to_show; let i = index" routerLink="">
+                    <tr *ngFor="let stoixio of to_show; let i = index" (click)="navigate(stoixio[0])" >
                         <th scope="row">{{ i+1 }}</th>
                         <td>{{ stoixio[0] }}</td>
                         <td>{{ stoixio[1] }}</td>
@@ -65,7 +65,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let stoixio of to_show1; let j = index">
+                    <tr *ngFor="let stoixio of to_show1; let j = index" (click)="navigate(stoixio[0])">
                         <th scope="row">{{ j+1 }}</th>
                         <td>{{ stoixio[0] }}</td>
                         <td>{{ stoixio[1] }}</td>
@@ -76,6 +76,11 @@
         </div>
     </div> 
 </div>
+
+<br>
+<div *ngIf="amea" class="metro">
+    <h5 style="padding: 20px;">*Όλοι οι σταθμόι σταθερών συγκοινωνιών διαθέτουν ανελκυστήρα για την εξυπηρέτηση ΑμεΑ.</h5>
+</div >
 
 <div *ngIf="sta8eres" class="metro">
     <h2 class="h2s" style="padding: 20px;">Χάρτης Σταθερών Συγκοινωνιών</h2>

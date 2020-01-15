@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
       .subscribe(result => { 
         console.log("RES: ");
         console.log(result);
+        this.router.navigate(['']);
       }, error =>{
         //alert('Invalid login');
         if(error.status === 404){

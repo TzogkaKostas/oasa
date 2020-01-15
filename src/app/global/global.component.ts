@@ -32,5 +32,9 @@ export class GlobalComponent implements OnInit {
     //window.location.reload();
   }
 
+  outSign(){
+    this.http.sign_out();
+  }
+
 
 }

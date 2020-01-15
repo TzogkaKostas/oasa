@@ -21,6 +21,9 @@
         <button *ngIf="greek && this.http.isLoggedIn()" type="button" class="btn btn-success"  routerLink ="user">Επεξεργασία Λογαριασμού</button>
         <button *ngIf="!greek && this.http.isLoggedIn()" type="button" class="btn btn-success"  routerLink ="user">Edit Account</button>
         <div class="divider"></div>
+        <button *ngIf="greek && this.http.isLoggedIn()" type="button" class="btn btn-success" (click)="outSign()">Έξοδος Χρήστη</button>
+        <button *ngIf="!greek && this.http.isLoggedIn()" type="button" class="btn btn-success"  (click)="outSign()">Sign Out</button>
+        <div class="divider"></div>
         <button *ngIf="greek" type="button" class="btn btn-outline-secondary" routerLink='sixneserotiseis'>Συχνές Ερωτήσεις
             <img src="/assets/questionmark1.svg" width="22" height="22" 
             title="Αν πατήσετε στον παραπάνω&#013;σύνδεσμο, θα βρείτε ερωτήσεις&#013;που συχνά κάνουν οι χρήστες&#013;μαζί με τις απαντήσεις τους!">
@@ -102,8 +105,8 @@
             <div ngbDropdownMenu class="dropdown-menu">
               <a class="dropdown-item" href="shmeia-ekdosis/odikes">Σημεία έκδοσης στις Οδικές</a>
               <a class="dropdown-item" href="shmeia-ekdosis/sta8eres">Σημεία έκδοσης στις Σταθερές</a>
-              <a class="dropdown-item" href="">Τιμές εισιτηρίων</a>
-              <a class="dropdown-item" href="">Τιμές χρονικών προϊόντων</a>
+              <a class="dropdown-item" href="times\eisitiria">Τιμές εισιτηρίων</a>
+              <a class="dropdown-item" href="times\kartes">Τιμές χρονικών προϊόντων</a>
             </div>
           </div>
 
@@ -127,7 +130,7 @@
               ΑμεΑ
             </button>
             <div ngbDropdownMenu class="dropdown-menu">
-              <a class="dropdown-item" href="">Εύρεση στάσεων με ράμπα</a>
+              <a class="dropdown-item" href="plhrofories/odikes/amea">Εύρεση στάσεων με ράμπα</a>
               <a class="dropdown-item" href="">Γενικές πληροφορίες ΑμεΑ</a>
             </div>
           </div>

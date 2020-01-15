@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 // import { HttpClient } from '@angular/common/http';
 import { Http } from '@angular/http';
-// import { JwtHelper, tokenNotExpired } from 'angular2-jwt';
+import { tokenNotExpired } from 'angular2-jwt';
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/map'
 
@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map'
 })
 export class HttpService {
 
-  url= 'http://00d9d989.ngrok.io/angular_app/';
+  url= 'http://f78fafea.ngrok.io/angular_app/';
 
   constructor(
     // private httpC: HttpClient,
@@ -19,49 +19,32 @@ export class HttpService {
   ) { }
 
   login(userInfo){
-    // return this.http.get(this.url + 'get_user.php/',
-    //   userInfo)
-    //   .map(response => {
-    //     console.log(response);
-    //     let result = response.json();
-    //     console.log(result);
-    //     console.log('TOKEN');
-    //     if(result && result.token){
-    //       localStorage.setItem('token', result.token);
-    //       console.log(result.token);
-    //       return true;
-    //     }
-    //     else{
-    //       console.log('ERROR IN SIGN IN')
-    //       return false;
-    //     }
-    //   });
     // console.log('PIRA STO SIGN IN: ');
     console.log(userInfo);
     console.log(this.url + 'get_user.php/?username=' + userInfo.username + '&password=' + userInfo.password);
-    // return
-    // let params = { }
-    // params['username'] = userInfo.username;
-    // params['password'] = userInfo.password;
     return this.http.get(this.url + 'get_user.php/?username=' + userInfo.username + '&password=' + userInfo.password)
     .map(response => {
       let user = response.json();
       console.log("Logged in JSON: ", user);
       // console.log("Logged in: ", response);
       if(user){
-        // if (user['state'] == 'ACCEPTED' && user['response'] == 'OK') {
-        //   localStorage.setItem('token', JSON.stringify(user)); 
-        //   localStorage.setItem('username', userInfo.username);           
-        //   return true;
-        // }  
+        localStorage.setItem('user', JSON.stringify(user));
         return user;
       }
       return false;
     });
   }
 
-  signup(){
+  signup(userInfo){
+    console.log(userInfo);
+    // console.log(this.url + 'insert.php/?username=' + userInfo.username + '&password=' + userInfo.password);
+    return this.http.get(this.url + 'insert.php/?username=' + userInfo.username + '&password=' + userInfo.password
+    + '&name=' + userInfo.name + '&surname=' + userInfo.surname + '&email=' + userInfo.email);
+  }
 
+  edit(userInfo){
+    return this.http.get(this.url + 'edit.php/?username=' + userInfo.username + '&password=' + userInfo.password
+    + '&name=' + userInfo.name + '&surname=' + userInfo.surname + '&email=' + userInfo.email);
   }
 
   erotimatologio(){
@@ -73,13 +56,23 @@ export class HttpService {
   }
 
   isLoggedIn(){
-    // return tokenNotExpired('token');//this does what the lines bellow does
-    return false;
+    if(localStorage.getItem("user") === null)return false;
+    return true;
   }
 
   updateUserInfo(itemData){
     console.log("New object is :" + itemData);
     // return this.http.post(this.url + '/item/update_auction', itemData);
   }
+
+  current_user(){
+    var user = localStorage.getItem("user");
+    return JSON.parse(user);
+  }
+
+  sign_out(){
+    localStorage.removeItem('user');
+  }
+
 
 }

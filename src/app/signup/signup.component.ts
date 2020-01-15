@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,38 +9,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignupComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private httpServ: HttpService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
 
   signUp(credentials) {
-    // if( credentials.latitude > 90 || credentials.latitude < -90 ){
-    //   alert('Latitude must be between (-90,90)degrees!');
-    //   return;
-    // }
-    // if( credentials.longitude > 180 || credentials.longitude < -180 ){
-    //   alert('Longitude must be between (-180,180)degrees!');
-    //   return;
-    // }
-
-
-    // delete credentials.password2
-
-    // console.log(credentials);
-    // this.invalidSignUp = false;
-    
-    // this.authService.logup(credentials)
-    //   .subscribe(result => { 
-    //     if (result){
-    //       this.router.navigate(['/main-page']);
-    //     }
-    //     else  
-    //       this.invalidSignUp = true; 
-    //   }, error => {
-    //     console.log(error);
-    //     this.invalidSignUp = true;
-    //   });
+    this.httpServ.signup(credentials)
+      .subscribe(result => { 
+        localStorage.setItem('user', JSON.stringify(credentials));
+        this.router.navigate(['']);
+      }, error =>{
+        //alert('Invalid login');
+        if(error.status === 404){
+          // this.invalidLogin = true;
+        }
+        else{
+          alert('Something Went Wrong!' + " errostatus." + error.status);
+        }
+      });
   }
 
 }

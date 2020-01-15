@@ -1,1 +1,72 @@
-<p>times-eisitirion works!</p>
+
+<br>
+<div *ngIf="eisitiria" >
+    <div class="center">
+        <h2 style="padding: 20px;">Τιμές Εισητηρίων</h2>
+        <div *ngIf="to_show.length != 0">
+        <table class="table pinakas">
+            <thead>
+            <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">Είδος</th>
+                <th scope="col">Κανονικό (Ενιαίο)</th>
+                <th scope="col">Μειωμένο</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stoixio of to_show; let j = index">
+                    <!-- <th scope="row">{{ j+1 }}</th> -->
+                    <td>{{ stoixio[0] }}</td>
+                    <td>{{ stoixio[1] }}</td>
+                    <td>{{ stoixio[2] }}</td>
+
+                    <!-- <td>{{ stoixio[1] }}</td>
+                    <td>{{ stoixio[2] }}</td> -->
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div> 
+</div>
+
+<br>
+<div *ngIf="!eisitiria" >
+    <div class="center">
+        <h2 style="padding: 20px;">Τιμές Χρ. Προιόντων (Κάρτες)</h2>
+        <div *ngIf="to_show.length != 0">
+        <table class="table pinakas">
+            <thead>
+            <tr>
+                <!-- <th scope="col">#</th> -->
+                <th scope="col">Είδος</th>
+                <th scope="col">Ανώνυμη Κάρτα</th>
+                <th scope="col"> </th>
+                <th scope="col">Προσωποποιημένη Κάρτα</th>
+                <th scope="col"> </th>
+            </tr>
+            <tr>
+                <!-- <th scope="col"> </th> -->
+                <th scope="col"> </th>
+                <th scope="col">Κανονικό (Ενιαίο)</th>
+                <th scope="col">Μειωμένο</th>
+                <th scope="col">Κανονικό (Ενιαίο)</th>
+                <th scope="col">Μειωμένο</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let stoixio of to_show1; let j = index">
+                    <!-- <th scope="row">{{ j+1 }}</th> -->
+                    <td>{{ stoixio[0] }}</td>
+                    <td>{{ stoixio[1] }}</td>
+                    <td>{{ stoixio[2] }}</td>
+                    <td>{{ stoixio[3] }}</td>
+                    <td>{{ stoixio[4] }}</td>
+
+                    <!-- <td>{{ stoixio[1] }}</td>
+                    <td>{{ stoixio[2] }}</td> -->
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div> 
+</div>

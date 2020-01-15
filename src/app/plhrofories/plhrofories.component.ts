@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-plhrofories',
@@ -9,7 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 export class PlhroforiesComponent implements OnInit {
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private rou: Router
   ) { }
 
   diadromes = [
@@ -69,8 +70,10 @@ export class PlhroforiesComponent implements OnInit {
   eidos: string;
   odikes: boolean;
   sta8eres: boolean;
+  amea:boolean;
 
   ngOnInit() {
+    this.amea = this.route.params['_value']['id2'];
     this.eidos = this.route.snapshot.paramMap.get("id");
     console.log(this.eidos);
     if(this.eidos == 'odikes'){
@@ -99,6 +102,11 @@ export class PlhroforiesComponent implements OnInit {
     for(var j = 1 ; j < this.grammes[index1].length ;  j++){
       this.to_show1.push(this.grammes[index1][j]);
     }
+  }
+
+  navigate(grammh){
+    this.rou.navigate(['staseis/' + grammh]);
+    // console.log(grammh)
   }
 
 }

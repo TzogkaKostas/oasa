@@ -1,0 +1,29 @@
+<!-- <p>staseis works!</p> -->
+<br>
+<div class="center">
+    <h2 style="padding: 20px;">Στάσεις της γραμμής {{grammh}}</h2>
+    <div *ngIf="to_show.length != 0">
+    <table class="table pinakas">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Γραμμή</th>
+            <th scope="col">ΑμεΑ</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stoixio of to_show; let j = index">
+                <th scope="row">{{ j+1 }}</th>
+                <td>{{ stoixio[0] }}</td>
+                <td *ngIf="stoixio[1]">
+                    <img src="/assets/amea.jpg"  width="20" height="20" title="Main Page">
+                </td>
+                <td *ngIf="!stoixio[1]">
+                </td>
+                <!-- <td>{{ stoixio[1] }}</td>
+                <td>{{ stoixio[2] }}</td> -->
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div> 

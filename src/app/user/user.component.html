@@ -60,7 +60,7 @@
                 <!-- <div class="card-text" *ngIf="item"> -->
                     <div *ngIf="!willChange[2]">
                         {{item.username}}          
-                        <button type="button" class="btn btn-primary float-right" (click)="editUser(2)">Αλλαγή</button>
+                        <!-- <button type="button" class="btn btn-primary float-right" (click)="editUser(2)">Αλλαγή</button> -->
                     </div>
                     <div *ngIf="willChange[2]">
                         <input ngModel name="Username" #Username="ngModel" id="Username" type="text" class="form-control"  placeholder="Όνομα χρήστη" pattern="^[a-zA-z0-9]*$" required>

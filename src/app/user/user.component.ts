@@ -11,7 +11,7 @@ export class UserComponent implements OnInit {
 
   private willChange: boolean[]=[];
   private willChangeCount: number
-  item = {"name":"John", "surname":"fgdfgDoe", "username":"fgdadsasdasdadsae", "email":"ljklDoe","password":"rterDoe"}
+  item;
 
   constructor(
     private router: ActivatedRoute,
@@ -24,6 +24,7 @@ export class UserComponent implements OnInit {
     this.willChangeCount = 4;
     for(var i=0;i<this.willChangeCount;i++)
       this.willChange[i] = false;
+    this.item = this.http.current_user();
   }
 
   editUser(index)
@@ -43,19 +44,21 @@ export class UserComponent implements OnInit {
 
   Update(itemData)
   {
-    console.log("New object is (update) :" + itemData);
-   
-    this.http.updateUserInfo(itemData)
-    // .subscribe( (response) => {
-    //   if(response){
-    //     console.log("Auction Updated Sucessfully");
-    //     this.router.navigate(['']);
-    //   } else{
-    //     // this.changesWentWrong = true;
-    //     console.log("Something went wrong. Auction has not been updated."); 
-    //   }
-    // });
-    this.rou.navigate(['']);//diagrafh
+    console.log(itemData);
+    this.http.edit(itemData)
+      .subscribe(result => { 
+        localStorage.removeItem('user');
+        localStorage.setItem('user', JSON.stringify(itemData));
+        alert('Επιτυχής Αλλαγή Στοιχείων');
+      }, error =>{
+        //alert('Invalid login');
+        if(error.status === 404){
+          // this.invalidLogin = true;
+        }
+        else{
+          alert('Something Went Wrong!' + " errostatus." + error.status);
+        }
+      });
   }
 
   cancel(){
