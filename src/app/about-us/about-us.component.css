@@ -1,0 +1,13 @@
+.center{
+    /* background-color: rgb(255, 255, 255);; */
+    /* display: flex; */
+    /* justify-content: center; */
+
+    position: relative;
+    /* right: 12%; */
+    margin: auto;
+    width: 65%;
+    height: auto;
+    top: 75px;
+    border-radius: 25px;
+}

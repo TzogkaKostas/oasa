@@ -1,3 +1,4 @@
+import { AboutUsComponent } from './about-us/about-us.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainpageComponent } from './mainpage/mainpage.component';
@@ -38,7 +39,8 @@ const routes: Routes = [
   { path: 'shmeia-ekdosis/:id', component: ShmeiaEkdosisOdikesComponent },
   { path: 'plhrofories/:id', component: PlhroforiesComponent },
   { path: 'plhrofories/:id/:id2', component: PlhroforiesComponent },
-  { path: 'staseis/:id', component: StaseisComponent }
+  { path: 'staseis/:id', component: StaseisComponent },
+  { path: 'about_us', component: AboutUsComponent }
 ];
 
 @NgModule({

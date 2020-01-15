@@ -30,6 +30,7 @@ import { GooglePlaceModule } from "ngx-google-places-autocomplete";
 import { PlhroforiesComponent } from './plhrofories/plhrofories.component';
 import { HttpModule } from '@angular/http';
 import { StaseisComponent } from './staseis/staseis.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
@@ -55,7 +56,8 @@ import { StaseisComponent } from './staseis/staseis.component';
     FortisiKartasComponent,
     ShmeiaEkdosisOdikesComponent,
     PlhroforiesComponent,
-    StaseisComponent
+    StaseisComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
